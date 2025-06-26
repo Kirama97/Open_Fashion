@@ -42,7 +42,32 @@ slider.addEventListener('touchend', (e) => {
 });
 
 // Auto slide (optionnel)
-setInterval(() => showSlide((current + 1) % slides.length), 2000);
+setInterval(() => showSlide((current + 1) % slides.length), 3500);
 
 showSlide(current);
 
+
+
+// faire le deplacement entre categorie 
+
+const filtreBtns = document.querySelectorAll('.filter-btn');
+const products = document.querySelectorAll('.product');
+
+
+filtreBtns.forEach(btn =>{
+
+    btn.addEventListener('click', () =>{
+        filtreBtns.forEach(b => b.classList.remove('border-(--orange)' , 'text-(--orange)', 'border-b-2'));
+          btn.classList.add('border-(--orange)' , 'text-(--orange)', 'border-b-2' );
+
+          const filter = btn.getAttribute('data-filter');
+          products.forEach(prod => {
+            if(filter ==="all" || prod.dataset.category === filter){
+                prod.classList.remove('hidden');
+            }else {
+                prod.classList.add('hidden') ;
+            }
+          });
+    });
+
+});
