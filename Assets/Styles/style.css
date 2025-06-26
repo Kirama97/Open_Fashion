@@ -1,0 +1,21 @@
+*{
+   
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    text-transform: none;
+    font-family: "Tenor Sans", sans-serif;
+
+}
+
+
+/* code couleur */
+
+
+:root {
+    --header: #E7EAEF;
+    --blanc: #FFFFFF;
+    --font-primaire: "Tenor Sans", sans-serif;
+    --gray-color-link: #888888;
+    --orange-color: #DD8560;
+}
