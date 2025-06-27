@@ -6,7 +6,12 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <link rel="stylesheet" href="Assets\Styles\style.css">
     <title>Open Fashion</title>
+
+
+
 </head>
+
+
 <body>
 
 
@@ -101,10 +106,10 @@
               
             </div>
             <!-- Indicateurs -->
-            <div id="indicators" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
-                <span class="indicator w-3 h-3 rounded-full bg-white/70 border border-white cursor-pointer"></span>
-                <span class="indicator w-3 h-3 rounded-full bg-white/30 border border-white cursor-pointer"></span>
-                <span class="indicator w-3 h-3 rounded-full bg-white/30 border border-white cursor-pointer"></span>
+            <div id="indicators_hero" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+                <span class="indicator_hero w-3 h-3 rounded-full bg-white/70 border border-white cursor-pointer"></span>
+                <span class="indicator_hero w-3 h-3 rounded-full bg-white/30 border border-white cursor-pointer"></span>
+                <span class="indicator_hero w-3 h-3 rounded-full bg-white/30 border border-white cursor-pointer"></span>
             </div>
         </header>
 
@@ -178,7 +183,7 @@
 
         <!-- collection -->
 
-        <section class=" w-full ">
+        <section class=" w-full mb-20">
 
             <h1 class="text-center text-xl md:text-2xl">COLLECTION</h1>
 
@@ -192,7 +197,7 @@
                  </div>
             </div>
 
-            <div class=" w-full px-5 sm:px-[7%] py-2 sm:py-10 grid grid-cols-2 gap-5 md:gap-10">
+            <div class=" w-full px-5 sm:px-[7%] py-15 sm:py-[15%] grid grid-cols-2 gap-5 md:gap-10">
 
                 <div class="h-[30vh] sm:h-[60vh] bg-cover bg-center  bg-[url(/Assets/Resources/images/autumn1.png)]   flex items-center  ">            
                  <div class=" ml-[10%] flex items-center">
@@ -224,6 +229,76 @@
 
         <!-- just for YOU -->
 
+        <section class="py-10 px-[7%]">
+             <div class="new_arrival_title text-center text-xl md:text-2xl">
+                   <div class="flex-col items-center justify-center ">
+                        <h1 class="tracking-widest ">JUST FOR YOU</h1>
+                        <img class="mx-auto opacity-30 mt-2"  src="/Assets/Resources/icones/Devider.svg" alt="" srcset="">
+                       
+                   </div>
+             </div>
+
+
+
+             <!-- slide de just for you  -->
+
+
+             <div class="max-w-7xl mx-auto py-10 px-4">
+                    <!-- Carrousel -->
+                    <div id="carousel_home" class="flex overflow-x-auto scroll-smooth space-x-4 px-2 md:px-0  hide-scrollbar">
+                        <!-- Item 1 -->
+                        <div class="carousel-item min-w-[80%] sm:min-w-[50%] md:min-w-[25%] flex-shrink-0">
+                            <div class="product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                                <img src="/Assets/Resources/images/woman/new_arrival_all_1.png" alt="21WN reversible angora cardigan" class="w-full h-56 md:h-80 object-cover rounded">
+                                <div class="text-center mt-4">21WN reversible angora cardigan</div>
+                                <div class="text-center text-(--orange) py-3">$120</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item min-w-[80%] sm:min-w-[50%] md:min-w-[25%] flex-shrink-0">
+                            <div class="product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                                <img src="/Assets/Resources/images/woman/new_arrival_all_2.png" alt="21WN reversible angora cardigan" class="w-full h-56 md:h-80 object-cover rounded">
+                                <div class="text-center mt-4">21WN reversible angora cardigan</div>
+                                <div class="text-center text-(--orange) py-3">$120</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item min-w-[80%] sm:min-w-[50%] md:min-w-[25%] flex-shrink-0">
+                            <div class="product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                                <img src="/Assets/Resources/images/woman/new_arrival_all_3.png" alt="21WN reversible angora cardigan" class="w-full h-56 md:h-80 object-cover rounded">
+                                <div class="text-center mt-4">21WN reversible angora cardigan</div>
+                                <div class="text-center text-(--orange) py-3">$120</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item min-w-[80%] sm:min-w-[50%] md:min-w-[25%] flex-shrink-0">
+                            <div class="product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                                <img src="/Assets/Resources/images/woman/new_arrival_all_4.png" alt="21WN reversible angora cardigan" class="w-full h-56 md:h-80 object-cover rounded">
+                                <div class="text-center mt-4">21WN reversible angora cardigan</div>
+                                <div class="text-center text-(--orange) py-3">$120</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item min-w-[80%] sm:min-w-[50%] md:min-w-[25%] flex-shrink-0">
+                            <div class="product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                                <img src="/Assets/Resources/images/woman/new_arrival_all_1.png" alt="21WN reversible angora cardigan" class="w-full h-56 md:h-80 object-cover rounded">
+                                <div class="text-center mt-4">21WN reversible angora cardigan</div>
+                                <div class="text-center text-(--orange) py-3">$120</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item min-w-[80%] sm:min-w-[50%] md:min-w-[25%] flex-shrink-0">
+                            <div class="product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                                <img src="/Assets/Resources/images/woman/new_arrival_all_2.png" alt="21WN reversible angora cardigan" class="w-full h-56 md:h-80 object-cover rounded">
+                                <div class="text-center mt-4">21WN reversible angora cardigan</div>
+                                <div class="text-center text-(--orange) py-3">$120</div>
+                            </div>
+                        </div>
+                        <!-- ... autres items ... -->
+                    </div>
+                    <!-- Indicateurs -->
+                    <div id="indicators_home" class="flex justify-center mt-4 space-x-2"></div>
+            </div>
+
+              
+
+        </section>
+
         
 
     </main>
@@ -231,6 +306,56 @@
 
 
     <script src="/Assets/Scripts/main.js" type="module"></script>
+
+
+     <script>
+    const carousel = document.getElementById("carousel_home");
+    const items = carousel.querySelectorAll(".carousel-item");
+    const indicatorsContainer = document.getElementById("indicators_home");
+
+    // Calcule le nombre de "pages" visibles selon la largeur
+    function getVisibleCount() {
+      const width = carousel.offsetWidth;
+      const itemWidth = items[0].offsetWidth;
+      return Math.floor(width / itemWidth);
+    }
+
+    function createIndicators() {
+      indicatorsContainer.innerHTML = "";
+      const total = items.length;
+      const visible = getVisibleCount();
+      const pages = Math.ceil(total / visible);
+
+      for (let i = 0; i < pages; i++) {
+        const dot = document.createElement("span");
+        dot.className = "w-2 h-2 rounded-full bg-neutral-400 inline-block";
+        if (i === 0) dot.classList.add("bg-black");
+        indicatorsContainer.appendChild(dot);
+      }
+    }
+
+    function updateIndicator() {
+      const scrollLeft = carousel.scrollLeft;
+      const width = carousel.offsetWidth;
+      const page = Math.round(scrollLeft / width);
+
+      indicatorsContainer.childNodes.forEach((dot, i) => {
+        dot.classList.toggle("bg-black", i === page);
+        dot.classList.toggle("bg-neutral-700", i !== page);
+      });
+    }
+
+    carousel.addEventListener("scroll", () => {
+      updateIndicator();
+    });
+
+    window.addEventListener("resize", () => {
+      createIndicators();
+    });
+
+    // Initialisation
+    createIndicators();
+  </script>
  
     
 </body>

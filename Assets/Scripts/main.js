@@ -5,22 +5,22 @@
 
 let current = 0;
 const slides = document.querySelectorAll('.slide');
-const indicators = document.querySelectorAll('.indicator');
+const indicators_hero = document.querySelectorAll('.indicator_hero');
 
 function showSlide(idx) {
     slides.forEach((slide, i) => {
         slide.style.opacity = (i === idx) ? '1' : '0';
         slide.style.zIndex = (i === idx) ? '1' : '0';
     });
-    indicators.forEach((dot, i) => {
-        dot.classList.toggle('bg-white/70', i === idx);
+    indicators_hero.forEach((dot, i) => {
+        dot.classList.toggle('bg-black/70', i === idx);
         dot.classList.toggle('bg-white/30', i !== idx);
     });
     current = idx;
 }
 
 // Indicateur click
-indicators.forEach((dot, i) => {
+indicators_hero.forEach((dot, i) => {
     dot.addEventListener('click', () => showSlide(i));
 });
 
