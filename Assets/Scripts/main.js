@@ -71,3 +71,56 @@ filtreBtns.forEach(btn =>{
     });
 
 });
+
+
+
+// just for you slide 
+
+
+
+    const carousel = document.getElementById("carousel_home");
+    const items = carousel.querySelectorAll(".carousel-item");
+    const indicatorsContainer = document.getElementById("indicators_home");
+
+    // Calcule le nombre de "pages" visibles selon la largeur
+    function getVisibleCount() {
+      const width = carousel.offsetWidth;
+      const itemWidth = items[0].offsetWidth;
+      return Math.floor(width / itemWidth);
+    }
+
+    function createIndicators() {
+      indicatorsContainer.innerHTML = "";
+      const total = items.length;
+      const visible = getVisibleCount();
+      const pages = Math.ceil(total / visible);
+
+      for (let i = 0; i < pages; i++) {
+        const dot = document.createElement("span");
+        dot.className = "w-2 h-2 rounded-full bg-neutral-400 inline-block";
+        if (i === 0) dot.classList.add("bg-black");
+        indicatorsContainer.appendChild(dot);
+      }
+    }
+
+    function updateIndicator() {
+      const scrollLeft = carousel.scrollLeft;
+      const width = carousel.offsetWidth;
+      const page = Math.round(scrollLeft / width);
+
+      indicatorsContainer.childNodes.forEach((dot, i) => {
+        dot.classList.toggle("bg-neutral-800", i === page);
+        dot.classList.toggle("bg-neutral-100", i !== page);
+      });
+    }
+
+    carousel.addEventListener("scroll", () => {
+      updateIndicator();
+    });
+
+    window.addEventListener("resize", () => {
+      createIndicators();
+    });
+
+    // Initialisation
+    createIndicators();
