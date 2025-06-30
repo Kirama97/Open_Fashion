@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+
+
+    
+
+    <nav class="bg-white shadow-xl flex h-[8vh] z-20 items-center px-[7%] justify-between">
+   <button onclick="toggleMenu()" class="md:hidden">
+    <img class="w-5" src="/Assets/Resources/icones/Menu.svg" alt="Menu">
+  </button>
+  <a href="/index.html" class="flex items-center text-orange-500 font-bold text-xl">
+    <img class="w-15 h-15" src="/Assets/Resources/icones/Logo.svg" alt="Logo">
+  </a>
+  <div class="hidden md:flex space-x-4 items-center">
+  <div class="group relative">
+    <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">WOMEN</a>
+    <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Apparel</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Shoes</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Beauty</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Accessories</a>
+    </div>
+  </div>
+  <div class="group relative">
+    <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">MAN</a>
+    <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">T-Shirts</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Jeans</a>
+    </div>
+  </div>
+  <div class="group relative">
+    <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">KIDS</a>
+    <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New Arrivals</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Toys</a>
+    </div>
+  </div>
+  <a class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500" href="/Pages/blog_grid.html">BLOG</a>
+</div>
+  <div class="flex items-center gap-5">
+    <a href="#">
+      <img class="w-5" src="/Assets/Resources/icones/Search.svg" alt="Search">
+    </a>
+    <a href="#">
+      <img class="w-5" src="/Assets/Resources/icones/shopping bag.svg" alt="Bag">
+    </a>
+  </div>
+</nav>
+
+  <!-- Sidebar Tab Menu -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-80 h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 md:hidden">
+    <!-- Header for mobile -->
+    <div class="flex items-center justify-between p-4 border-b">
+      <span class="text-lg font-medium">Menu</span>
+      <button onclick="toggleMenu()">✕</button>
+    </div>
+
+
+    <div class="flex justify-around text-sm font-medium uppercase mt-4 border-b">
+      <button onclick="switchTab('women')" id="tab-women" class="py-2 border-b-2 border-orange-500 text-orange-500">Women</button>
+      <button onclick="switchTab('man')" id="tab-man" class="py-2 text-gray-500">Man</button>
+      <button onclick="switchTab('kids')" id="tab-kids" class="py-2 text-gray-500">Kids</button>
+    </div>
+
+    <div class="p-4">
+     
+      <div id="content-women" class="tab-content space-y-2">
+        <div class="menu-item">New</div>
+        <div class="menu-item">Apparel</div>
+        <div class="menu-item">Bag</div>
+        <div class="menu-item">Shoes</div>
+        <div class="menu-item">Beauty</div>
+        <div class="menu-item">Accessories</div>
+      </div>
+
+     
+      <div id="content-man" class="tab-content hidden space-y-2">
+        <div class="menu-item">New</div>
+        <div class="menu-item">T-Shirts</div>
+        <div class="menu-item">Sneakers</div>
+        <div class="menu-item">Jeans</div>
+        <div class="menu-item">Watches</div>
+      </div>
+
+      <div id="content-kids" class="tab-content hidden space-y-2">
+        <div class="menu-item">New Arrivals</div>
+        <div class="menu-item">Toys</div>
+        <div class="menu-item">Clothes</div>
+        <div class="menu-item">Shoes</div>
+      </div>
+
+      <div class="mt-6 space-y-2 text-gray-700 text-sm">
+        <div class="flex items-center gap-2">📞 <span>(786) 713-8616</span></div>
+        <div class="flex items-center gap-2">📍 <span>Store locator</span></div>
+      </div>
+
+    
+      <div class="flex justify-center mt-6 space-x-6 text-xl text-gray-600">
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+        <a href="#">▶️</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container -->
+  <div class="max-w-2xl mx-auto p-4">
+
+    <img src="/Assets/Resources/images/autumn2.png" alt="Blog header" class="w-full h-auto rounded-md mb-4" />
+
+    <h1 class="text-xl font-semibold mb-2 uppercase">
+      2021 Style Guide: The Biggest Fall Trends
+    </h1>
+
+ 
+    <p class="text-sm leading-relaxed mb-4">
+      You guys know how much I love mixing high and low-end — it's the best way to get the most bang for your buck while still elevating your wardrobe. The same goes for handbags! And honestly they are probably the best pieces to mix and match.
+    </p>
+    <p class="text-sm leading-relaxed mb-6">
+      I truly think the key to completing a look is with a great bag and I found so many this year that I wanted to share a round-up of my most worn handbags.
+    </p>
+
+
+    <div class="mb-6">
+      <img src="/Assets/Resources/images/follow_us_2.png" alt="Model with handbag" class="w-full h-auto rounded" />
+      <div class="flex justify-center mt-2 space-x-2">
+        <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+        <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
+        <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
+      </div>
+    </div>
+
+    <!-- Link Highlight -->
+    <!-- <p class="text-sm">
+      I found this
+      <a href="#" class="text-pink-500 underline hover:text-pink-700">Saint Laurent canvas handbag</a>
+      this year and it’s been my go-to!
+    </p> -->
+
+  </div>
+
+
+  
+    <!-- footer -->
+
+    <footer class=" mt-[10%]">
+
+       <div class="   px-10 px-[7%] flex gap-10 flex-col md:flex md:flex-row  items-center justify-between py-[10vh]">
+           <div class="flex justify-center items_center gap-10">
+            <img src="/Assets/Resources/icones/Twitter.svg" alt="" srcset="">
+            <img src="/Assets/Resources/icones/instagram_plein.svg" alt="" srcset="">
+            <img src="/Assets/Resources/icones/youtube.svg" alt="" srcset="">
+            
+        </div>
+        <div class="text-center">
+            <p>support@openui.design +60 825 87608:00 - 22:00 - Everyday</p>
+        </div>
+        <div class=" flex item-center justify-center gap-5">
+            <a href=""  class="hover:text-(--orange)  duration-200 ">About</a>
+            <a href="" class="hover:text-(--orange) duration-200 ">Contact</a>
+            <a href="" class="hover:text-(--orange) duration-200 ">Blog</a>
+        </div>
+       </div>
+
+       <div class="p-5 bg-neutral-200">
+         <p class="max-sm:text-md text-center">Copyright© OpenUI All Rights Reserved.</p>
+       </div>
+
+        
+    </footer>
+
+</body>
+</html>

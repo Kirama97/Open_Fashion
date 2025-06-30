@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <link rel="stylesheet" href="Assets\Styles\style.css">
     <title>Open Fashion</title>
 
@@ -15,57 +15,112 @@
 <body>
 
 
-    <nav class="bg-(--header) shadow-xl  shadow-gray-400 flex h-[8vh] z-20">
-        
-           
-                <div class="flex w-full items-center justify-between px-[7%] ">
-                      <a href="" class=" flex md:hidden">
-                        <img  class="w-5" src="/Assets/Resources/icones/Menu.svg" alt="" srcset="">
-                       </a>
 
-                    <a href="/index.html" class="flex items-center text-orange font-bold text-xl">
-                        <img class="w-15 h-15" src="/Assets/Resources/icones/Logo.svg" alt="" srcset="">
-                    </a>
-                    <div class="hidden md:flex ml-10 space-x-4">
-                        <div class="">
-                            <a href="#" class="px-3 py-2 text-sm  text-gay-link hover:text-orange">HOME</a>
- 
-                        </div>
-                        <div class="relative group">
-                            <a href="#" class="px-3 py-2 text-sm text-gay-link hover:text-orange">WOMAN</a>
-                            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-10">
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Women</a>
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Femme</a>
-                            </div>
-                        </div>
-                        <div class="relative group">
-                            <a href="#" class="px-3 py-2 text-sm text-gay-link hover:text-orange">MAN</a>
-                            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-10">
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Email</a>
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Téléphone</a>
-                            </div>
-                        </div>
-                        <div class="relative group">
-                            <a href="#" class="px-3 py-2 text-sm text-gay-link hover:text-orange">KIDS</a>
-                            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-10">
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Email</a>
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Téléphone</a>
-                            </div>
-                        </div>
-                    </div>
+    <nav class="bg-white shadow-xl flex h-[8vh] z-20 items-center px-[7%] justify-between">
+   <button onclick="toggleMenu()" class="md:hidden">
+    <img class="w-5" src="/Assets/Resources/icones/Menu.svg" alt="Menu">
+  </button>
+  <a href="/index.html" class="flex items-center text-orange-500 font-bold text-xl">
+    <img class="w-15 h-15" src="/Assets/Resources/icones/Logo.svg" alt="Logo">
+  </a>
+  <div class="hidden md:flex space-x-4 items-center">
+  <div class="group relative">
+    <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">WOMEN</a>
+    <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Apparel</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Shoes</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Beauty</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Accessories</a>
+    </div>
+  </div>
+  <div class="group relative">
+    <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">MAN</a>
+    <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">T-Shirts</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Jeans</a>
+    </div>
+  </div>
+  <div class="group relative">
+    <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">KIDS</a>
+    <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New Arrivals</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Toys</a>
+    </div>
+  </div>
+  <a class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500" href="/Pages/blog_grid.html">BLOG</a>
+</div>
+  <div class="flex items-center gap-5">
+    <a href="#">
+      <img class="w-5" src="/Assets/Resources/icones/Search.svg" alt="Search">
+    </a>
+    <a href="#">
+      <img class="w-5" src="/Assets/Resources/icones/shopping bag.svg" alt="Bag">
+    </a>
+  </div>
+</nav>
 
-                    <div class="icone flex items-center gap-5">
-                       <a href="http://">
-                        <img  class="w-5"  src="/Assets/Resources/icones/Search.svg" alt="" srcset="">
-                       </a>
-                       <a href="http://">
-                        <img  class="w-5" src="/Assets/Resources/icones/shopping bag.svg" alt="" srcset="">
-                       </a>
-                     
-                    </div>
-                </div>                  
-      
-    </nav> 
+  <!-- Sidebar Tab Menu -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-80 h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 md:hidden">
+    <!-- Header for mobile -->
+    <div class="flex items-center justify-between p-4 border-b">
+      <span class="text-lg font-medium">Menu</span>
+      <button onclick="toggleMenu()">✕</button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex justify-around text-sm font-medium uppercase mt-4 border-b">
+      <button onclick="switchTab('women')" id="tab-women" class="py-2 border-b-2 border-orange-500 text-orange-500">Women</button>
+      <button onclick="switchTab('man')" id="tab-man" class="py-2 text-gray-500">Man</button>
+      <button onclick="switchTab('kids')" id="tab-kids" class="py-2 text-gray-500">Kids</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="p-4">
+      <!-- Women Tab -->
+      <div id="content-women" class="tab-content space-y-2">
+        <div class="menu-item">New</div>
+        <div class="menu-item">Apparel</div>
+        <div class="menu-item">Bag</div>
+        <div class="menu-item">Shoes</div>
+        <div class="menu-item">Beauty</div>
+        <div class="menu-item">Accessories</div>
+      </div>
+
+      <!-- Man Tab -->
+      <div id="content-man" class="tab-content hidden space-y-2">
+        <div class="menu-item">New</div>
+        <div class="menu-item">T-Shirts</div>
+        <div class="menu-item">Sneakers</div>
+        <div class="menu-item">Jeans</div>
+        <div class="menu-item">Watches</div>
+      </div>
+
+      <!-- Kids Tab -->
+      <div id="content-kids" class="tab-content hidden space-y-2">
+        <div class="menu-item">New Arrivals</div>
+        <div class="menu-item">Toys</div>
+        <div class="menu-item">Clothes</div>
+        <div class="menu-item">Shoes</div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="mt-6 space-y-2 text-gray-700 text-sm">
+        <div class="flex items-center gap-2">📞 <span>(786) 713-8616</span></div>
+        <div class="flex items-center gap-2">📍 <span>Store locator</span></div>
+      </div>
+
+      <!-- Socials -->
+      <div class="flex justify-center mt-6 space-x-6 text-xl text-gray-600">
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+        <a href="#">▶️</a>
+      </div>
+    </div>
+  </div>
+
+
 
     <main>
         <header class="h-[92vh]  relative overflow-hidden">
@@ -391,7 +446,7 @@
 
     <footer class=" mt-[10%]">
 
-       <div class="   px-10 px-[7%] flex gap-10 flex-col md:flex md:flex-row  items-center justify-between py-15">
+       <div class="   px-10 px-[7%] flex gap-10 flex-col md:flex md:flex-row  items-center justify-between py-[10vh]">
            <div class="flex justify-center items_center gap-10">
             <img src="/Assets/Resources/icones/Twitter.svg" alt="" srcset="">
             <img src="/Assets/Resources/icones/instagram_plein.svg" alt="" srcset="">
@@ -419,6 +474,21 @@
 
     <script src="/Assets/Scripts/main.js" type="module"></script>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("-translate-x-full");
+    }
+
+    function switchTab(tab) {
+      const tabs = ['women', 'man', 'kids'];
+      tabs.forEach(t => {
+        document.getElementById(`tab-${t}`).classList.remove('text-orange-500', 'border-orange-500', 'border-b-2');
+        document.getElementById(`content-${t}`).classList.add('hidden');
+      });
+      document.getElementById(`tab-${tab}`).classList.add('text-orange-500', 'border-orange-500', 'border-b-2');
+      document.getElementById(`content-${tab}`).classList.remove('hidden');
+    }
+  </script>
 
  
     

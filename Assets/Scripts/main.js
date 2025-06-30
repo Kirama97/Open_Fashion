@@ -33,9 +33,9 @@ slider.addEventListener('touchstart', (e) => {
 slider.addEventListener('touchend', (e) => {
     if (startX === null) return;
     let endX = e.changedTouches[0].clientX;
-    if (endX - startX > 50) { // swipe right
+    if (endX - startX > 50) { 
         showSlide((current - 1 + slides.length) % slides.length);
-    } else if (startX - endX > 50) { // swipe left
+    } else if (startX - endX > 50) { 
         showSlide((current + 1) % slides.length);
     }
     startX = null;
