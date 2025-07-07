@@ -27,19 +27,25 @@ indicators_hero.forEach((dot, i) => {
 // Swipe support
 let startX = null;
 const slider = document.getElementById('slider');
-slider.addEventListener('touchstart', (e) => {
+
+ if(slider){
+
+  slider.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
 });
-slider.addEventListener('touchend', (e) => {
-    if (startX === null) return;
-    let endX = e.changedTouches[0].clientX;
-    if (endX - startX > 50) { 
-        showSlide((current - 1 + slides.length) % slides.length);
-    } else if (startX - endX > 50) { 
-        showSlide((current + 1) % slides.length);
-    }
-    startX = null;
-});
+  slider.addEventListener('touchend', (e) => {
+      if (startX === null) return;
+      let endX = e.changedTouches[0].clientX;
+      if (endX - startX > 50) { 
+          showSlide((current - 1 + slides.length) % slides.length);
+      } else if (startX - endX > 50) { 
+          showSlide((current + 1) % slides.length);
+      }
+      startX = null;
+  });
+
+ }
+
 
 // Auto slide (optionnel)
 setInterval(() => showSlide((current + 1) % slides.length), 3500);
@@ -79,11 +85,17 @@ filtreBtns.forEach(btn =>{
 
 
     const carousel = document.getElementById("carousel_home");
-    const items = carousel.querySelectorAll(".carousel-item");
-    const indicatorsContainer = document.getElementById("indicators_home");
+   
 
     // Calcule le nombre de "pages" visibles selon la largeur
-    function getVisibleCount() {
+
+  if (carousel) {
+
+
+  const items = carousel.querySelectorAll(".carousel-item");
+  const indicatorsContainer = document.getElementById("indicators_home");
+
+        function getVisibleCount() {
       const width = carousel.offsetWidth;
       const itemWidth = items[0].offsetWidth;
       return Math.floor(width / itemWidth);
@@ -124,3 +136,25 @@ filtreBtns.forEach(btn =>{
 
     // Initialisation
     createIndicators();
+
+    
+  }
+
+    // ----------------------affichage dupanier------------------
+
+const btn_open_panier = document.querySelector('.btn_open_panier');
+const close_panier = document.querySelector('.close_panier');
+const box_panier = document.querySelector('.box_panier');
+
+if (btn_open_panier && box_panier) {
+  btn_open_panier.addEventListener('click', () => {
+    box_panier.classList.remove('hidden');
+    setTimeout(() => box_panier.classList.add('active'), 10); 
+  });
+}
+if (close_panier && box_panier) {
+  close_panier.addEventListener('click', () => {
+    box_panier.classList.remove('active');
+    setTimeout(() => box_panier.classList.add('hidden'), 500); // Attend la fin de la transition
+  });
+}

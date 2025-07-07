@@ -3,68 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog Page</title>
-   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="/Assets/Styles/style.css">
+  <title>Category_list_view</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="">
 
-    
-    <!-- <nav class="bg-(--header) shadow-xl  shadow-gray-400 flex h-[8vh] z-20">
-        
-           
-                <div class="flex w-full items-center justify-between px-[7%] ">
-                      <a href="" class=" flex md:hidden">
-                        <img  class="w-5" src="/Assets/Resources/icones/Menu.svg" alt="" srcset="">
-                       </a>
-
-                    <a href="/index.html" class="flex items-center text-orange font-bold text-xl">
-                        <img class="w-15 h-15" src="/Assets/Resources/icones/Logo.svg" alt="" srcset="">
-                    </a>
-                    <div class="hidden md:flex ml-10 space-x-4">
-                        <div class="">
-                            <a href="#" class="px-3 py-2 text-sm  text-gay-link hover:text-orange">HOME</a>
- 
-                        </div>
-                        <div class="relative group">
-                            <a href="#" class="px-3 py-2 text-sm text-gay-link hover:text-orange">WOMAN</a>
-                            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-10">
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Women</a>
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Femme</a>
-                            </div>
-                        </div>
-                        <div class="relative group">
-                            <a href="#" class="px-3 py-2 text-sm text-gay-link hover:text-orange">MAN</a>
-                            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-10">
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Email</a>
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Téléphone</a>
-                            </div>
-                        </div>
-                        <div class="relative group">
-                            <a href="#" class="px-3 py-2 text-sm text-gay-link hover:text-orange">KIDS</a>
-                            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-10">
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Email</a>
-                                <a href="#" class="block px-4 py-2 text-gay-link hover:bg-hedear">Téléphone</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="icone flex items-center gap-5">
-                       <a href="http://">
-                        <img  class="w-5"  src="/Assets/Resources/icones/Search.svg" alt="" srcset="">
-                       </a>
-                       <a href="http://">
-                        <img  class="w-5" src="/Assets/Resources/icones/shopping bag.svg" alt="" srcset="">
-                       </a>
-                     
-                    </div>
-                </div>                  
-      
-    </nav>  -->
+<body>
 
 
 
-  
     <nav class="big_nav bg-white  top-0 left-0 shadow-xl flex h-[8vh] z-20 items-center px-[7%] justify-between relative">
         <button onclick="toggleMenu()" class="md:hidden">
           <img class="w-5" src="/Assets/Resources/icones/Menu.svg" alt="Menu">
@@ -163,6 +110,7 @@
             </div>
   </nav>
 
+
   <!-- Sidebar Tab Menu -->
     <div id="mobileMenu" class="fixed top-0 left-0 w-80 h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 md:hidden">
     
@@ -234,94 +182,64 @@
       </div>
     </div>
 
-  <main class="mt-[8vh]">
 
-      <section class="px-4 sm:px-10 w-full">
-    <div class="py-6">
-      <!-- Title -->
-    <div class="flex-col items-center text-center justify-center py-10">
-                    <h1 class="text-center text-xl md:text-2xl">BLOG</h1>
-                <img class="mx-auto opacity-30 mt-2"  src="/Assets/Resources/icones/Devider.svg" alt="" srcset="">       
-              </div>
+<main class="mt-[8vh]">
 
-      <!-- Filter buttons -->
-      <div class="flex flex-wrap justify-center gap-2 mb-10 px-2">
-        <button class="px-4 py-1 bg-gray-200 hover:text-white hover:bg-neutral-400 rounded-full text-sm">Fashion</button>
-        <button class="px-4 py-1 bg-gray-200 hover:text-white hover:bg-neutral-400 rounded-full text-sm">Promo</button>
-        <button class="px-4 py-1 bg-gray-200 hover:text-white hover:bg-neutral-400 rounded-full text-sm">Policy</button>
-        <button class="px-4 py-1 bg-gray-200 hover:text-white hover:bg-neutral-400 rounded-full text-sm">Lookbook</button>
-        <button class="px-4 py-1 bg-gray-200 hover:text-white hover:bg-neutral-400 rounded-full text-sm">Sale</button>
-      </div>
+    <section class="px-4 sm:px-[7%] w-full">
+        <div class="py-6">
+        <!-- Title -->
 
-      <div class="grid gap-6 lg:grid-cols-2 w-full">
+        <div class="top_category">
+
+        </div>
+       
+
+        <!-- Filter buttons -->
+   
+
+        <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3 w-full">
+
+            <div class="  flex  hover:cursor-pointer hover:shadow-lg rounded-lg overflow-hidden ">
+                <img class="w-[40%] h-full duration-300  object-cover" src="/Assets/Resources/images/autumn1.png" alt="" srcset="">
+                <div class="bg-neutral-100 p-5 w-full">
+                    <h1 class="text-md lg:text-md mb-2">LAMEREI</h1>
+                    <p class="text-sm text-neutral-500 mb-2">Recycle Boucle Knit Cardiguan Pink</p>
+                    <span class="text-(--orange) text-sm my-5">$120</span>
+                    <div class="flex items-center gap-2 mb-3">
+                       <div class="">
+                            <img class="w-4 h-3" src="/Assets/Resources/icones/etoile.svg" alt="" srcset="">
+                            <span class="text-sm">4.8 Rating</span>
+                       </div>
+                       <img src="/Assets/Resources/icones/coeur.svg" alt="" srcset="">
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-sm">Size</span>
+                        <div class=" flex gap-2">
+                            <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">S</span>
+                            <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">M</span>
+                            <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">L</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
         
-        <div class=" blog_box_item cursor-pointer  rounded-md h-64 flex flex-col justify-end bg-cover bg-center relative overflow-hidden"
-            style="background-image: url('/Assets/Resources/images/autumn1.png');" onclick="window.location.href='/Pages/blog_post.html'">
-          <div class="w-full h-2/3 absolute bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-          <div class="relative z-10 p-4 text-white">
-            <h2 class="text-sm font-medium">2021 STYLE GUIDE: THE BIGGEST FALL TRENDS</h2>
-            <div class="flex gap-2 mt-2 text-xs">
-              <span class="bg-white/20 px-2 py-0.5 rounded">#Fashion</span>
-              <span class="bg-white/20 px-2 py-0.5 rounded">#Tips</span>
-            </div>
-            <p class="text-xs text-gray-300 mt-2">4 days ago</p>
-          </div>
+
+            
+        
         </div>
-      
-        <div class=" blog_box_item cursor-pointer  rounded-md h-64 flex flex-col justify-end bg-cover bg-center relative overflow-hidden"
-            style="background-image: url('/Assets/Resources/images/follow_us_3.png');" onclick="window.location.href='/Pages/blog_post.html'">
-          <div class="w-full h-2/3 absolute bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-          <div class="relative z-10 p-4 text-white">
-            <h2 class="text-sm font-medium">2021 STYLE GUIDE: THE BIGGEST FALL TRENDS</h2>
-            <div class="flex gap-2 mt-2 text-xs">
-              <span class="bg-white/20 px-2 py-0.5 rounded">#Fashion</span>
-              <span class="bg-white/20 px-2 py-0.5 rounded">#Tips</span>
-            </div>
-            <p class="text-xs text-gray-300 mt-2">4 days ago</p>
-          </div>
+
+        
+        <button class="flex gap-3 mx-auto my-20 border border-1 px-20  py-5 hover:shadow-md hover:bg-neutral-100 "> Voir Plus <img class="w-5 h-5" src="/Assets/Resources/icones/Plus.svg" alt="" srcset=""></button>
+
         </div>
-      
-        <div class=" blog_box_item cursor-pointer  rounded-md h-64 flex flex-col justify-end bg-cover bg-center relative overflow-hidden"
-            style="background-image: url('/Assets/Resources/images/autumn2.png');" onclick="window.location.href='/Pages/blog_post.html'">
-          <div class="w-full h-2/3 absolute bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-          <div class="relative z-10 p-4 text-white">
-            <h2 class="text-sm font-medium">2021 STYLE GUIDE: THE BIGGEST FALL TRENDS</h2>
-            <div class="flex gap-2 mt-2 text-xs">
-              <span class="bg-white/20 px-2 py-0.5 rounded">#Fashion</span>
-              <span class="bg-white/20 px-2 py-0.5 rounded">#Tips</span>
-            </div>
-            <p class="text-xs text-gray-300 mt-2">4 days ago</p>
-          </div>
-        </div>
-      
-        <div class=" blog_box_item cursor-pointer  rounded-md h-64 flex flex-col justify-end bg-cover bg-center relative overflow-hidden"
-            style="background-image: url('/Assets/Resources/images/follow_us_1.png');"  onclick="window.location.href='/Pages/blog_post.html'">
-          <div class="w-full h-2/3 absolute bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-          <div class="relative z-10 p-4 text-white">
-            <h2 class="text-sm font-medium">2021 STYLE GUIDE: THE BIGGEST FALL TRENDS</h2>
-            <div class="flex gap-2 mt-2 text-xs">
-              <span class="bg-white/20 px-2 py-0.5 rounded">#Fashion</span>
-              <span class="bg-white/20 px-2 py-0.5 rounded">#Tips</span>
-            </div>
-            <p class="text-xs text-gray-300 mt-2">4 days ago</p>
-          </div>
-        </div>
-      </div>
-
-      
-      <button class="flex gap-3 cursor-pointer mx-auto my-20 border border-1 px-20  py-5 hover:shadow-md hover:bg-neutral-100 "> Voir Plus <img class="w-5 h-5" src="/Assets/Resources/icones/plus .svg" alt="" srcset=""></button>
-
-    </div>
-      </section>
+</section>
 
 
-  </main>
+</main>
 
 
-
-
-
-
+  
     <!-- footer -->
 
     <footer class=" mt-[10%]">
@@ -350,10 +268,6 @@
         
     </footer>
 
-
-
-
-<script src="/Assets/Scripts/main.js" type="module"></script>
-
+  <script src="/Assets/Scripts/main.js"></script>
 </body>
 </html>

@@ -38,3 +38,77 @@
   -ms-overflow-style: none;  /* IE et Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+
+
+/* 
+ .box_panier {
+
+  width: 400px;
+  height: 100%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 8vh;
+  z-index: 100;
+  transition: 0.5s ease-in-out;
+
+
+
+}  */
+
+body {
+  overflow-x: hidden;
+}
+
+.big_nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+
+.box_panier {
+  width: 400px;
+  height: 92vh;
+  position: absolute;
+  right: 0;
+  top: 8vh;
+  z-index: 100;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.box_panier.active {
+  transform: translateX(0);
+}
+.box_panier.hidden {
+  display: none;
+}
+
+.box_panier_in::-webkit-scrollbar {
+  width: 4px;
+  background: #ffffff;
+}
+
+.box_panier_in::-webkit-scrollbar-thumb {
+  background-color: #dad1d1;
+  border-radius: 4px;
+}
+
+
+
+
+
+.panier_item_description {
+
+  display:-webkit-box ; 
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  
+}
