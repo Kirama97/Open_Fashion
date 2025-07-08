@@ -112,3 +112,21 @@ body {
   overflow: hidden;
   
 }
+
+.category_list_view_items .description {
+    display:-webkit-box ; 
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("/Assets/Resources/icones/Polygon\ 1.svg") no-repeat right center;
+  padding: 0.5em 2em 0.5em 0.5em;
+
+}
