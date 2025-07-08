@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/Assets/Styles/style.css">
-  <title>Category_list_view</title>
+  <title>Category_list_grid</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
@@ -208,106 +208,71 @@
                     </div>
                 </div>
             </div>
+
+            <div class="flex items center gap-3">
+                <div class="py-1 px-3 flex justify-center flex overflow-hidden items-center gap-2 rounded-full bg-neutral-100 text-sm cursor-pointer hover:bg-neutral-200">
+                    <p>Women</p>
+                    <span class="rounded-full hover:bg-blue-500 hover:invert p-1">
+                        <img class="w-3  " src="/Assets/Resources/icones/x.svg" alt="" srcset="">
+                    </span>
+                </div> 
+                <div class="py-1 px-3 flex justify-center flex overflow-hidden items-center gap-2 rounded-full bg-neutral-100 text-sm cursor-pointer hover:bg-neutral-200">
+                    <p>All papers</p>
+                    <span class="rounded-full hover:bg-blue-500 hover:invert p-1">
+                        <img class="w-3  " src="/Assets/Resources/icones/x.svg" alt="" srcset="">
+                    </span>
+                </div> 
+               
+            </div>
           
 
             <!-- Filter buttons -->
       
 
-            <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3 w-full mt-10">
+            <div class="grid gap-6 lg:grid-cols-3 xl:grid-cols-4 w-full mt-10">
                 <!-- .category_list_view_items -->
-                <div class=" category_list_view_items h-50 flex  hover:cursor-pointer hover:shadow-lg rounded-lg overflow-hidden ">
-                    <img class="w-[40%] h-full duration-300  object-cover" src="/Assets/Resources/images/category_all/cat1.png" alt="" srcset="">
-                    <div class=" p-5 w-full">
-                        <div class="flex items-center justify-between">
-                        <h1 class="text-md lg:text-md mb-3">LAMEREI</h1>
-                        <svg width="18" class="hover:fill-(--orange) duration-300" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.84806 2.51477C0.272813 4.09002 0.272814 6.64401 1.84806 8.21926L7.95796 14.3291L7.99995 14.2872L8.042 14.3292L14.1519 8.21931C15.7271 6.64405 15.7271 4.09007 14.1519 2.51482C12.5766 0.939567 10.0227 0.939568 8.44741 2.51482L8.35356 2.60867C8.1583 2.80393 7.84171 2.80393 7.64645 2.60867L7.55255 2.51477C5.9773 0.939515 3.42331 0.939516 1.84806 2.51477Z" stroke="#DD8560"/>
-                            </svg>
-                        </div>
-                        <p class="text-sm text-neutral-500 mb-2 description">Recycle Boucle Knit Cardiguan Pink</p>
-                      
-                        <div class="flex items-center justify-between gap-2 my-3">
-                          
-                          <div class="flex items-center">
-                                <img class="w-4 h-3" src="/Assets/Resources/icones/etoile.svg" alt="" srcset="">
-                                <span class="text-sm">4.8 Rating</span>
-                          </div>
-                            <span class="text-(--orange) text-md ">$120</span>                   
-
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-sm">Size</span>
-                            <div class=" flex gap-2">
-                                <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">S</span>
-                                <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">M</span>
-                                <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">L</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- .category_list_view_items -->
-                <div class=" category_list_view_items h-50 flex  hover:cursor-pointer hover:shadow-lg rounded-lg overflow-hidden ">
-                    <img class="w-[40%] h-full duration-300  object-cover" src="/Assets/Resources/images/category_all/cat2.png" alt="" srcset="">
-                    <div class=" p-5 w-full">
-                        <div class="flex items-center justify-between">
-                        <h1 class="text-md lg:text-md mb-3">LAMEREI</h1>
-                        <svg width="18" class="hover:fill-(--orange) duration-300" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.84806 2.51477C0.272813 4.09002 0.272814 6.64401 1.84806 8.21926L7.95796 14.3291L7.99995 14.2872L8.042 14.3292L14.1519 8.21931C15.7271 6.64405 15.7271 4.09007 14.1519 2.51482C12.5766 0.939567 10.0227 0.939568 8.44741 2.51482L8.35356 2.60867C8.1583 2.80393 7.84171 2.80393 7.64645 2.60867L7.55255 2.51477C5.9773 0.939515 3.42331 0.939516 1.84806 2.51477Z" stroke="#DD8560"/>
-                            </svg>
-                        </div>
-                        <p class="text-sm text-neutral-500 mb-2 description">Recycle Boucle Knit Cardiguan Pink</p>
-                      
-                        <div class="flex items-center justify-between gap-2 my-3">
-                          
-                          <div class="flex items-center">
-                                <img class="w-4 h-3" src="/Assets/Resources/icones/etoile.svg" alt="" srcset="">
-                                <span class="text-sm">4.8 Rating</span>
-                          </div>
-                            <span class="text-(--orange) text-md ">$120</span>                   
-
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-sm">Size</span>
-                            <div class=" flex gap-2">
-                                <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">S</span>
-                                <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">M</span>
-                                <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">L</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- .category_list_view_items -->
-                <div class=" category_list_view_items h-50 flex  hover:cursor-pointer hover:shadow-lg rounded-lg overflow-hidden ">
-                    <img class="w-[40%] h-full duration-300  object-cover" src="/Assets/Resources/images/category_all/cat3.png" alt="" srcset="">
-                    <div class=" p-5 w-full">
-                        <div class="flex items-center justify-between">
-                        <h1 class="text-md lg:text-md mb-3">LAMEREI</h1>
-                        <svg width="18" class="hover:fill-(--orange) duration-300" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.84806 2.51477C0.272813 4.09002 0.272814 6.64401 1.84806 8.21926L7.95796 14.3291L7.99995 14.2872L8.042 14.3292L14.1519 8.21931C15.7271 6.64405 15.7271 4.09007 14.1519 2.51482C12.5766 0.939567 10.0227 0.939568 8.44741 2.51482L8.35356 2.60867C8.1583 2.80393 7.84171 2.80393 7.64645 2.60867L7.55255 2.51477C5.9773 0.939515 3.42331 0.939516 1.84806 2.51477Z" stroke="#DD8560"/>
-                            </svg>
-                        </div>
-                        <p class="text-sm text-neutral-500 mb-2 description">Recycle Boucle Knit Cardiguan Pink</p>
-                      
-                        <div class="flex items-center justify-between gap-2 my-3">
-                          
-                          <div class="flex items-center">
-                                <img class="w-4 h-3" src="/Assets/Resources/icones/etoile.svg" alt="" srcset="">
-                                <span class="text-sm">4.8 Rating</span>
-                          </div>
-                            <span class="text-(--orange) text-md ">$120</span>                   
-
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-sm">Size</span>
-                            <div class=" flex gap-2">
-                                <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">S</span>
-                                <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">M</span>
-                                <span class="bloc w-7 h-7 flex items-center justify-center border border-1 border-neutral-200 text-[10px] hover:text-white hover:bg-(--orange) duration-200 rounded-full">L</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-      
+                
+                  <div class="category_list_view_items product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                        <img  src="/Assets/Resources/images/woman/new_arrival_all_1.png" alt="" class="w-full  h-50 md:h-80 object-cover rounded">
+                       <div class="px-3">
+                            <h3 class=" mt-4">21WN </h3>
+                            <p class=" text-neutral-500 text-sm">reversible angora cardigan</p>
+                            <div class=" text-right text-(--orange) py-3 ">$120</div>
+                       </div>
+                  </div>
+                  <div class="category_list_view_items product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                        <img  src="/Assets/Resources/images/woman/new_arrival_all_2.png" alt="" class="w-full  h-50 md:h-80 object-cover rounded">
+                       <div class="px-3">
+                            <h3 class=" mt-4">21WN </h3>
+                            <p class=" text-neutral-500 text-sm">reversible angora cardigan</p>
+                            <div class=" text-right text-(--orange) py-3 ">$120</div>
+                       </div>
+                  </div>
+                  <div class="category_list_view_items product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                        <img  src="/Assets/Resources/images/woman/new_arrival_all_3.png" alt="" class="w-full  h-50 md:h-80 object-cover rounded">
+                       <div class="px-3">
+                            <h3 class=" mt-4">21WN </h3>
+                            <p class=" text-neutral-500 text-sm">reversible angora cardigan</p>
+                            <div class=" text-right text-(--orange) py-3 ">$120</div>
+                       </div>
+                  </div>
+                  <div class="category_list_view_items product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                        <img  src="/Assets/Resources/images/woman/new_arrival_all_4.png" alt="" class="w-full  h-50 md:h-80 object-cover rounded">
+                       <div class="px-3">
+                            <h3 class=" mt-4">21WN </h3>
+                            <p class=" text-neutral-500 text-sm">reversible angora cardigan</p>
+                            <div class=" text-right text-(--orange) py-3 ">$120</div>
+                       </div>
+                  </div>
+                  <div class="category_list_view_items product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                        <img  src="/Assets/Resources/images/woman/new_arrival_all_2.png" alt="" class="w-full  h-50 md:h-80 object-cover rounded">
+                       <div class="px-3">
+                            <h3 class=" mt-4">21WN </h3>
+                            <p class=" text-neutral-500 text-sm">reversible angora cardigan</p>
+                            <div class=" text-right text-(--orange) py-3 ">$120</div>
+                       </div>
+                  </div>
+           
                 
             
             </div>
@@ -362,9 +327,7 @@
 
 
 </main>
-
-
-  
+ 
     <!-- footer -->
 
     <footer class=" mt-[10%]">
