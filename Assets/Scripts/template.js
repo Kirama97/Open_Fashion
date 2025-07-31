@@ -49,7 +49,10 @@ export const my_header = () => {
             </svg>
 
           </a>  
-          <a  class="btn_open_panier group  cursor-pointer">
+          <a  class="btn_open_panier group  cursor-pointer relative">
+             <div class="flex items-center absolute bg-(--orange) px-2 text-[12px] rounded-sm text-white top-[-13px] right-[-20px]">
+              <span class="compteur_panier" >0</span>
+             </div>
             <svg width="24" height="24" viewBox="0 0 24 24" class="w-5 stroke-black hover:stroke-(--orange)" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20.6592 6.7207L21.4756 23.2803H3.49512L4.31152 6.7207H20.6592Z"/>
               <path d="M8.1604 10.1491L8.1604 5.55139C8.1604 4.40438 8.61605 3.30434 9.42711 2.49328C10.2382 1.68221 11.3382 1.22656 12.4852 1.22656C13.6322 1.22656 14.7323 1.68221 15.5433 2.49328C16.3544 3.30434 16.8101 4.40438 16.8101 5.55139V10.1491"/>
@@ -63,7 +66,7 @@ export const my_header = () => {
 
             <!-- panier -->
 
-          <div class="box_panier  shadow-lg bg-white borber border-t-2 border-(--orange)">
+          <div class="box_panier h-[92vh]  shadow-lg bg-white borber border-t-2 border-(--orange)">
 
                 <img class="close_panier m-2 w-7 float-right cursor-pointer p-1 hover:block hover:p-1 hover:bg-blue-500 hover:invert " src="/Assets/Resources/icones/x.svg" alt="">
                 
@@ -71,44 +74,33 @@ export const my_header = () => {
 
               <div class="box_panier_in h-[60vh]  overflow-y-scroll px-4 mb-5 ">
                   
-                  <div class=" box_panier_item h-35 flex justify-between hover:cursor-pointer overflow-hidden  hover:shadow-sm   mb-3 ">
-                      <img class="w-[30%]  rounded-sm h-full duration-300  object-cover" src="/Assets/Resources/images/autumn1.png" alt="" srcset="">
-                      <div class=" p-3 w-full hover:bg-neutral-50">
-                          <h1 class="text-sm lg:text-md mb-3">LAMEREI</h1>
-                          <p class="panier_item_description text-[12px] text-neutral-500 mb-2">Recycle Bouche Knit Cardigan Pink.</p>
-                          <div class="btn_add_remove flex items-center gap-2 mb-2">
-                            <button class="cursor-pointer hover:bg-(--orange) duration-200  flex cursor-pointer items-center justify-center  border border-1 border-neutral-300 rounded-full  w-7 h-7 text-sm  ">
-                              <img class="w-3" src="/Assets/Resources/icones/plus .svg" alt="" srcset="">
-                            </button>
-                            <input class="border-none  w-10 px-3" type="text" value="2">
-                            <button class="cursor-pointer hover:bg-(--orange) duration-200  flex items-center justify-center  border border-1 border-neutral-300 rounded-full  w-7 h-7 text-sm  ">
-                              <img class="w-3" src="/Assets/Resources/icones/minus.svg" alt="" srcset="">
-                            </button>
-                          </div>
-                          <span class="text-(--orange) text-md ">125$</span>
-                      </div>
-                </div>   
-             
+                
         
               </div>
 
-              <div class="mt-4 mx-4 pt-3 mb-3  borber border-t-1 border-neutral-200">
+                <div class="box_panier_in_bottom h-[30vh] ">
 
-                  <div class="flex items-center justify-between">
-                    <h1 class="text-md">SOUS TOTAL</h1>
-                    <p class="text-md text-(--orange)">245$</p>
-                  </div>
-                  <p class="text-[12px] text-neutral-500 mt-3">Les frais de livraison, les taxes et les codes de réduction sont calculés au moment de la facturation.</p>
                 
-              </div>
+                <div class="mt-4 mx-4 pt-3 mb-3  borber border-t-1 border-neutral-200">
 
-                <div class=" h-full w-full bg-black hover:bg-(--orange) duration-200  ">
-                  <button class="flex cursor-pointer w-full h-15 items-center justify-center gap-3">
-                    <img class="" src="/Assets/Resources/icones/shopping_bag_white.svg"  alt="" srcset="">
-                    <P class="text-white ">ACHETER</p>
-                  </button>
-
+                    <div class="flex items-center justify-between">
+                      <h1 class="text-md">SOUS TOTAL</h1>
+                      <p class="sous_total text-md text-(--orange)">245$</p>
+                    </div>
+                    <p class="text-[12px] text-neutral-500 mt-5">Les frais de livraison, les taxes et les codes de réduction sont calculés au moment de la facturation.</p>
+                  
                 </div>
+
+                  <div class=" h-full w-full bg-black flex  hover:bg-(--orange) duration-200  ">
+                    <button class="flex cursor-pointer w-full h-10 items-center justify-center gap-3">
+                      <img class="" src="/Assets/Resources/icones/shopping_bag_white.svg"  alt="" srcset="">
+                      <p class="valider_panier text-white ">ACHETER</p>
+                    </button>
+
+                  </div>
+             </div>
+
+                
 
               </div>
     
@@ -244,9 +236,9 @@ return `
                     </div>
                 </div>
 
-                <div class="bloc_btn_panier bg-black w-full h-15 p-3 lg:absolute max-lg:mt-[50px] lg:bottom-0  flex items-center justify-center group hover:bg-(--orange) cursor-pointer duration-200">
+                <div class="bouton_ajouter_panier bloc_btn_panier bg-black w-full h-15 p-3 lg:absolute max-lg:mt-[50px] lg:bottom-0  flex items-center justify-center group hover:bg-(--orange) cursor-pointer duration-200">
 
-                    <div class="bouton_ajouter_panier text-white flex gap-4 ">
+                    <div class=" text-white flex gap-4 ">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>                 
                         <h3>AJOUTER AU PANIER</h3>
 
@@ -340,4 +332,7 @@ return `
 `
 
 
-}
+};
+
+
+

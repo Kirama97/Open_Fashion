@@ -1,7 +1,8 @@
 
 import { data } from '../Scripts/data.js'; 
 import { mon_detail_produit } from '../Scripts/template.js';
-import { showToast_error , showToast } from "./back_office.js";
+import { showToast_error , showToast , updateCompteurPanier , afficherItemPanier , prixTotal}  from "./back_office.js";
+
 
 
 
@@ -58,7 +59,7 @@ function afficherDetailProduit(id) {
 
 
 
-            // creation dupanier de l'utilisateur 
+            // creation du panier de l'utilisateur 
 
               let email = localStorage.getItem('utilisateurConnecter');
               console.log(email)
@@ -115,8 +116,7 @@ function afficherDetailProduit(id) {
                 bouton_ajouter_panier.addEventListener('click', () => {
 
                      
-                   console.log( couleurChoisie);
-                   console.log( tailleChoisie)
+                 
 
                   if(!email) {
                     showToast_error("Veuillez vous connecter pour ajouter un produit au panier.");
@@ -126,7 +126,7 @@ function afficherDetailProduit(id) {
                   if(email && couleurChoisie && tailleChoisie) {
 
                  
-
+                    let panier = JSON.parse(localStorage.getItem(`panier_${email}`)) || [];
                     const index = panier.findIndex(item =>
                       item.id === produit.id &&
                       item.taille === tailleChoisie &&
@@ -142,6 +142,7 @@ function afficherDetailProduit(id) {
                             id: produit.id,
                             titre : produit.titre,
                             prix : produit.prix,
+                            detail : produit.details,
                             taille : tailleChoisie,
                             couleur: couleurChoisie,
                             image : produit.image,
@@ -152,8 +153,10 @@ function afficherDetailProduit(id) {
 
 
                     localStorage.setItem(`panier_${email}` , JSON.stringify(panier));
-                    showToast('Produit ajout" au pnaier ! ');
-                    // updateCartCount()
+                    showToast('Produit ajouter au pnaier ! ');
+                    updateCompteurPanier();
+                    afficherItemPanier();
+                    prixTotal();
                     const bloc_btn_panier = document.querySelector('.bloc_btn_panier');
                     bouton_ajouter_panier.setAttribute("disable","true");
                     bloc_btn_panier.classList.add("bg-neutral-400", "text-neutral-500");
@@ -175,22 +178,6 @@ function afficherDetailProduit(id) {
             }
 
             produitAuPanier(produit);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

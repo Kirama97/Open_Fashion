@@ -238,3 +238,13 @@ select {
    bottom: 3%;
   
 }
+
+
+
+@media  screen and (max-width:550px) {
+
+  .box_panier {
+    width: 100%;
+  }
+  
+}

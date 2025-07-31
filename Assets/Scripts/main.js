@@ -188,7 +188,9 @@ filtreBtns.forEach(btn =>{
     
   // }
 
-    // ----------------------affichage dupanier------------------
+    // ----------------------affichage du panier------------------
+
+
 
 const btn_open_panier = document.querySelector('.btn_open_panier');
 const close_panier = document.querySelector('.close_panier');
