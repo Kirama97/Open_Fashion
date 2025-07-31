@@ -112,7 +112,7 @@ export  function  afficherItemPanier(){
                             <p class="panier_item_description text-[12px] text-neutral-500 mb-2">${panierItem.detail}</p>
                             <div class="btn_add_remove flex items-center gap-2 mb-2">
                               <button data-index=${index} class="ajouter_produit cursor-pointer hover:bg-(--orange) duration-200  flex cursor-pointer items-center justify-center  border border-1 border-neutral-300 rounded-full  w-7 h-7 text-sm  ">
-                                <img class="w-3" src="/Assets/Resources/icones/plus .svg" alt="" srcset="">
+                                <img class="w-3" src="/Assets/Resources/icones/plus.svg" alt="" srcset="">
                               </button>
                               <input class="border-none  w-10 px-3" type="text" disabled value="${panierItem.quantiter}">
                               <button data-index=${index} class="diminuer_produit cursor-pointer hover:bg-(--orange) duration-200  flex items-center justify-center  border border-1 border-neutral-300 rounded-full  w-7 h-7 text-sm  ">
