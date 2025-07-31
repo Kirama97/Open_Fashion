@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bree+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+   
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    text-transform: none;
+    font-family: var(--font1);
+
+}
+
+
+/* code couleur */
+
+
+:root {
+    --header: #E7EAEF;
+    --blanc: #FFFFFF;
+    --font1: "Tenor Sans", sans-serif;
+    --font2: "Bodoni Moda", serif;;
+    --gray-color-link: #888888;
+    --orange: #DD8560;
+}
+
+/* page home */
+
+
+/* sect 1  NEW ARRIVAL  */
+
+
+
+/* Ajoute dans ton fichier CSS (style.css) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE et Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+
+
+/* 
+ .box_panier {
+
+  width: 400px;
+  height: 100%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 8vh;
+  z-index: 100;
+  transition: 0.5s ease-in-out;
+
+
+
+}  */
+
+body {
+  overflow-x: hidden;
+}
+
+.big_nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+
+.box_panier {
+  width: 400px;
+  height: 92vh;
+  position: absolute;
+  right: 0;
+  top: 8vh;
+  z-index: 100;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.box_panier.active {
+  transform: translateX(0);
+}
+.box_panier.hidden {
+  display: none;
+}
+
+.box_panier_in::-webkit-scrollbar 
+, .checkout_box_left::-webkit-scrollbar {
+  width: 4px;
+  background: #ffffff;
+}
+
+.box_panier_in::-webkit-scrollbar-thumb 
+, .checkout_box_left::-webkit-scrollbar-thumb {
+  background-color: #dad1d1;
+  border-radius: 4px;
+}
+
+
+
+
+
+.panier_item_description {
+
+  display:-webkit-box ; 
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  
+  
+}
+
+.category_list_view_items .description {
+    display:-webkit-box ; 
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("/Assets/Resources/icones/Polygon\ 1.svg") no-repeat right center;
+  padding: 0.5em 2em 0.5em 0.5em;
+
+}
+
+.collection_item h1 
+,.collection_title h1 {
+  font-family: var(--font2);
+}
+
+/* bouton like : */
+
+
+.heart-btn {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  
+  cursor: pointer;
+  transition: background 0.2s;
+  outline: none;
+}
+.heart-btn .heart-shape {
+  transition: fill 0.3s;
+}
+.heart-btn.liked .heart-shape {
+  fill: #DD8560; /* orange rempli */
+  stroke: #DD8560;
+}
+
+
+/* chechout detail */
+
+.custom-details[open] {
+  border-radius: 0 !important;
+  
+}
+
+
+/* message alert  */
+
+
+
+/* Toast alert */
+.toast,
+.toast_error {
+  visibility: hidden;
+  min-width: 300px;
+  background-color: rgb(14, 158, 14); /* Pour .toast, écrasé pour .toast_error plus bas */
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: -3%; /* Visible au-dessus du bas de l'écran */
+  transform: translateX(-50%);
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.9s, visibility 0.9s, bottom 0.6s;
+}
+
+.toast_error {
+  background-color: #e74c3c;
+}
+
+.toast.show 
+, .toast_error.show{
+  visibility: visible;
+  opacity: 1;
+   bottom: 3%;
+  
+}
+
+
+/* Toast alert */
+.toast,
+.toast_error {
+  visibility: hidden;
+  min-width: 300px;
+  background-color: rgb(14, 158, 14); /* Pour .toast, écrasé pour .toast_error plus bas */
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: -3%; /* Visible au-dessus du bas de l'écran */
+  transform: translateX(-50%);
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.9s, visibility 0.9s, bottom 0.6s;
+}
+
+.toast_error {
+  background-color: #e74c3c;
+}
+
+.toast.show 
+, .toast_error.show{
+  visibility: visible;
+  opacity: 1;
+   bottom: 3%;
+  
+}

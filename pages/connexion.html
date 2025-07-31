@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/Assets/Styles/style.css">
+</head>
+<body class="">
+
+ 
+
+
+
+    <nav class="big_nav bg-white  top-0 left-0 shadow-xl flex h-[8vh] z-20 items-center px-[7%] justify-between relative">
+        <button onclick="toggleMenu()" class="md:hidden">
+          <img class="w-5" src="/Assets/Resources/icones/Menu.svg" alt="Menu">
+        </button>
+        <a href="/index.html" class="flex items-center text-orange-500 font-bold text-xl">
+          <img class="w-15 h-15" src="/Assets/Resources/icones/Logo.svg" alt="Logo">
+        </a>
+        <div class="hidden md:flex space-x-4 items-center">
+        <div class="group relative">
+            <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">WOMEN</a>
+            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Apparel</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Shoes</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Beauty</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Accessories</a>
+            </div>
+        </div>
+        <div class="group relative">
+            <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">MAN</a>
+            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">T-Shirts</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Jeans</a>
+            </div>
+        </div>
+        <div class="group relative">
+            <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">KIDS</a>
+            <div class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New Arrivals</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Toys</a>
+            </div>
+        </div>
+        <a class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500" href="/Pages/blog_grid.html">BLOG</a>
+      </div>
+        <div class="flex items-center gap-5">
+          <a href="#">
+            <img class="w-5" src="/Assets/Resources/icones/Search.svg" alt="Search">
+          </a>
+          <a  class="btn_open_panier cursor-pointer">
+            <img class="w-5" src="/Assets/Resources/icones/shopping bag.svg" alt="Bag">
+          </a>
+        </div>
+
+            <!-- panier -->
+
+          <div class="box_panier  shadow-lg bg-white borber border-t-2 border-(--orange)">
+
+                <img class="close_panier m-2 w-7 float-right cursor-pointer p-1 hover:block hover:p-1 hover:bg-blue-500 hover:invert " src="/Assets/Resources/icones/x.svg" alt="">
+                
+                <h1 class="text-md py-5 mx-4">PANIER</h1>
+
+              <div class="box_panier_in h-[60vh]  overflow-y-scroll px-4 mb-5 ">
+                  
+                  <div class=" box_panier_item h-35 flex justify-between hover:cursor-pointer overflow-hidden  hover:shadow-sm   mb-3 ">
+                      <img class="w-[30%]  rounded-sm h-full duration-300  object-cover" src="/Assets/Resources/images/autumn1.png" alt="" srcset="">
+                      <div class=" p-3 w-full hover:bg-neutral-50">
+                          <h1 class="text-sm lg:text-md mb-3">LAMEREI</h1>
+                          <p class="panier_item_description text-[12px] text-neutral-500 mb-2">Recycle Bouche Knit Cardigan Pink.</p>
+                          <div class="btn_add_remove flex items-center gap-2 mb-2">
+                            <button class="cursor-pointer hover:bg-(--orange) duration-200  flex cursor-pointer items-center justify-center  border border-1 border-neutral-300 rounded-full  w-7 h-7 text-sm  ">
+                              <img class="w-3" src="/Assets/Resources/icones/Plus .svg" alt="" srcset="">
+                            </button>
+                            <input class="border-none  w-10 px-3" type="text" value="2">
+                            <button class="cursor-pointer hover:bg-(--orange) duration-200  flex items-center justify-center  border border-1 border-neutral-300 rounded-full  w-7 h-7 text-sm  ">
+                              <img class="w-3" src="/Assets/Resources/icones/minus.svg" alt="" srcset="">
+                            </button>
+                          </div>
+                          <span class="text-(--orange) text-md ">125$</span>
+                      </div>
+                </div>   
+             
+        
+              </div>
+
+              <div class="mt-4 mx-4 pt-3 mb-3  borber border-t-1 border-neutral-200">
+
+                  <div class="flex items-center justify-between">
+                    <h1 class="text-md">SOUS TOTAL</h1>
+                    <p class="text-md text-(--orange)">245$</p>
+                  </div>
+                  <p class="text-[12px] text-neutral-500 mt-3">Les frais de livraison, les taxes et les codes de réduction sont calculés au moment de la facturation.</p>
+                
+              </div>
+
+                <div class=" h-full w-full bg-black hover:bg-(--orange) duration-200  ">
+                  <button class="flex cursor-pointer w-full h-15 items-center justify-center gap-3">
+                    <img class="" src="/Assets/Resources/icones/shopping_bag_white.svg"  alt="" srcset="">
+                    <P class="text-white ">ACHETER</p>
+                  </button>
+
+                </div>
+
+              </div>
+    
+            </div>
+  </nav>
+
+  <!-- Sidebar Tab Menu -->
+    <div id="mobileMenu" class="fixed top-0 left-0 w-80 h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 md:hidden">
+    
+      <div class="flex items-center justify-between p-4 border-b">
+        <span class="text-lg font-medium">Menu</span>
+        <button onclick="toggleMenu()">✕</button>
+      </div>
+
+
+      <div class="flex justify-around text-sm font-medium uppercase mt-4 ">
+        <button onclick="switchTab('women')" id="tab-women" class="py-2 border-b-2 border-orange-500 text-orange-500">Women</button>
+        <button onclick="switchTab('man')" id="tab-man" class="py-2 text-gray-500">Man</button>
+        <button onclick="switchTab('kids')" id="tab-kids" class="py-2 text-gray-500">Kids</button>
+      </div>
+
+    
+      <div class="p-4">
+        
+        <div id="content-women" class="tab-content space-y-2">
+          <div class="menu-item">New</div>
+          <div class="menu-item">Apparel</div>
+          <div class="menu-item">Bag</div>
+          <div class="menu-item">Shoes</div>
+          <div class="menu-item">Beauty</div>
+          <div class="menu-item">Accessories</div>
+        </div>
+
+
+        <div id="content-man" class="tab-content hidden space-y-2">
+          <div class="menu-item">New</div>
+          <div class="menu-item">T-Shirts</div>
+          <div class="menu-item">Sneakers</div>
+          <div class="menu-item">Jeans</div>
+          <div class="menu-item">Watches</div>
+        </div>
+
+      
+        <div id="content-kids" class="tab-content hidden space-y-2">
+          <div class="menu-item">New Arrivals</div>
+          <div class="menu-item">Toys</div>
+          <div class="menu-item">Clothes</div>
+          <div class="menu-item">Shoes</div>
+        </div>
+
+        <div class="mt-6 space-y-2 text-gray-700 text-sm">
+          <div class="flex items-center gap-2">
+             <img class="w-10 h-5"  src="/Assets/Resources/icones/Call.svg" alt="">
+             <span>(+221) 78 581 57 82</span>
+          </div>
+          <div class="flex items-center gap-2">
+             <img class="w-10 h-5" src="/Assets/Resources/icones/Location.svg" alt="" srcset="">
+             <span>Cite Senghor</span>
+            </div>
+        </div>
+
+         <img class="mx-auto opacity-50 my-5"  src="/Assets/Resources/icones/Devider.svg" alt="" srcset="">
+
+        <div class="flex justify-center mt-6 space-x-6 text-xl text-gray-600">
+          <a href="#">
+            <img src="/Assets/Resources/icones/Twitter.svg" alt="" srcset="">
+          </a>
+          <a href="#">
+              <img src="/Assets/Resources/icones/instagram_plein.svg" alt="" srcset="">
+          </a>
+          <a href="#">
+            <img src="/Assets/Resources/icones/YouTube.svg" alt="" srcset="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+<main class="mt-[8vh]">
+
+
+      <section class="hero_sign flex justify-between w-full h-[92vh]">
+         <div id="toast" class="toast"></div>
+         <div id="toast_error" class="toast_error"></div>
+
+         <div class="hero_sign_left max-md:hidden md:w-1/2 h-full bg-cover  bg-center    bg-[url(/Assets/Resources/images/bg-connexion.png)]"></div>
+         <div class="hero_sign_right w-full md:w-1/2 h-full p-10 lg:p-20 relative">
+          
+
+            <div class="hero_sign_righ_btn ">
+                <button class="flex items-center justify-center gap-5 bg-neutral-100 hover:bg-neutral-200 duration-200 p-3 rounded-md w-full mb-3 cursor-pointer">
+                    <img src="/Assets/Resources/icones/Google.svg" alt="" srcset="">
+                    <p>Connecter avec Google</p>
+                </button>
+                <button class="flex items-center justify-center gap-5 bg-neutral-100 hover:bg-neutral-200 duration-200 p-3 rounded-md w-full cursor-pointer">
+                    <img src="/Assets/Resources/icones/Twitter.svg" alt="" srcset="">
+                    <p>Connecter avec Twiter</p>
+                </button>
+            </div>
+
+            <div class="hero_sign_righ_middle py-4 flex items-center justify-center mb-5 ">
+                <div class="hero_sign_righ_middle_l h-[2px] w-full bg-(--orange)"></div>
+                 <div class="hero_sign_righ_middle_or mx-5">ou</div>
+                <div class="hero_sign_righ_middle_l h-[2px] w-full bg-(--orange)"></div>
+                
+            </div>
+
+            <form action="" class="connexion_form  w-full ">
+                   
+
+                           <div class="w-full mb-5 ">
+                                  <input class="border-b text-md focus:border-b-2 focus:border-(--orange)  outline-none border-neutral-300 w-full  p-2" type="email" name="email" placeholder="Email">
+                          </div>
+                           <div class="w-full mb-5 ">
+                                  <input class="border-b text-md   focus:border-b-2 focus:border-(--orange)  outline-none border-neutral-300 w-full  p-2" type="password" name="password" placeholder="Mots de passe">
+                          </div>
+                           <div class="w-full mb-5 flex flex-col gap-5 lg:flex-row lg:justify-between lg:items-center mt-10">                             
+
+                            <p  class="  text-sm text-nentral-200 " title="Creer un nouveau compte">Vous n'avez pas compte ? <a href="/Pages/Inscription.html" class="text-(--orange) hover:text-orange-600 duration-200"> inscrivez-vous</a></p>
+                            <a href="/Pages/Reset_password.html" class="  text-sm text-nentral-200 hover:text-(--orange) duration-200" title="Reinitialisé le mot de passe">Mots de passe oublié <span class="text-(--orange)">?</span> </a>
+                                  
+                          </div>
+
+                          
+                  
+                        <button  class="w-full bg-black absolute  bottom-0  left-0   text-white py-5  hover:bg-(--orange) cursor-pointer duration-200 transition " type="submit"  >
+                         
+                          <span class="text-md" >CONNEXION</span>
+
+                        </button>
+            </form>
+
+
+             
+         </div>
+
+      </section>
+
+</main>
+
+
+
+
+    <script src="/Assets/Scripts/main.js" type="module"></script>
+    <script src="/Assets/Scripts/connexion.js" type="module"></script>
+
+
+</body>
+</html>

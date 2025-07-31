@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="stylesheet" href="Assets\Styles\style.css">
+    <title>Open Fashion</title>
+
+
+
+</head>
+
+
+<body>
+
+
+
+    <nav class="big_nav bg-white  top-0 left-0 shadow-xl flex h-[8vh] z-20 items-center px-[7%] justify-between relative">
+        <button onclick="toggleMenu()" class="md:hidden">
+          <img class="w-5" src="/Assets/Resources/icones/Menu.svg" alt="Menu">
+        </button>
+        <a href="/index.html" class="flex items-center text-orange-500 font-bold text-xl">
+          <img class="w-15 h-15" src="/Assets/Resources/icones/Logo.svg" alt="Logo">
+        </a>
+        <div class="hidden md:flex space-x-4 items-center">
+        <div class="group relative">
+            <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">WOMEN</a>
+            <div class="absolute left-0  mt-1 w-40 bg-white  rounded hidden group-hover:block z-20">
+              <a href="/Pages/category_list_view.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Apparel</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Shoes</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Beauty</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Accessories</a>
+            </div>
+        </div>
+        <div class="group relative">
+            <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">MAN</a>
+            <div class="absolute left-0 mt-1 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+              <a href="/Pages/category_list_view.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">T-Shirts</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Jeans</a>
+            </div>
+        </div>
+        <div class="group relative">
+            <a href="#" class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500">KIDS</a>
+            <div class="absolute left-0 mt-1 w-40 bg-white shadow-lg rounded hidden group-hover:block z-20">
+              <a href="/Pages/category_list_view.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">New Arrivals</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Toys</a>
+            </div>
+        </div>
+        <a class="px-3 py-2 text-sm text-gray-600 hover:text-orange-500" href="/Pages/blog_grid.html">BLOG</a>
+      </div>
+        <div class="flex items-center gap-5">
+          <a href="#">
+            <img class="w-5" src="/Assets/Resources/icones/Search.svg" alt="Search">
+          </a>
+          <a  class="btn_open_panier cursor-pointer">
+            <img class="w-5" src="/Assets/Resources/icones/shopping bag.svg" alt="Bag">
+          </a>
+        </div>
+
+            <!-- panier -->
+
+          <div class="box_panier  shadow-lg bg-white borber border-t-2 border-(--orange)">
+
+                <img class="close_panier m-2 w-7 float-right cursor-pointer p-1 hover:block hover:p-1 hover:bg-blue-500 hover:invert " src="/Assets/Resources/icones/x.svg" alt="">
+                
+                <h1 class="text-md py-5 mx-4">PANIER</h1>
+
+              <div class="box_panier_in h-[60vh]  overflow-y-scroll px-4 mb-5 ">
+                  
+                  <div class=" box_panier_item h-35 flex justify-between hover:cursor-pointer overflow-hidden  hover:shadow-sm   mb-3 ">
+                      <img class="w-[30%]  rounded-sm h-full duration-300  object-cover" src="/Assets/Resources/images/autumn1.png" alt="" srcset="">
+                      <div class=" p-3 w-full hover:bg-neutral-50">
+                          <h1 class="text-sm lg:text-md mb-3">LAMEREI</h1>
+                          <p class="panier_item_description text-[12px] text-neutral-500 mb-2">Recycle Bouche Knit Cardigan Pink.</p>
+                          <div class="btn_add_remove flex items-center gap-2 mb-2">
+                            <button class="cursor-pointer hover:bg-(--orange) duration-200  flex cursor-pointer items-center justify-center  border border-1 border-neutral-300 rounded-full  w-7 h-7 text-sm  ">
+                              <img class="w-3" src="/Assets/Resources/icones/plus .svg" alt="" srcset="">
+                            </button>
+                            <input class="border-none  w-10 px-3" type="text" value="2">
+                            <button class="cursor-pointer hover:bg-(--orange) duration-200  flex items-center justify-center  border border-1 border-neutral-300 rounded-full  w-7 h-7 text-sm  ">
+                              <img class="w-3" src="/Assets/Resources/icones/minus.svg" alt="" srcset="">
+                            </button>
+                          </div>
+                          <span class="text-(--orange) text-md ">125$</span>
+                      </div>
+                </div>   
+             
+        
+              </div>
+
+              <div class="mt-4 mx-4 pt-3 mb-3  borber border-t-1 border-neutral-200">
+
+                  <div class="flex items-center justify-between">
+                    <h1 class="text-md">SOUS TOTAL</h1>
+                    <p class="text-md text-(--orange)">245$</p>
+                  </div>
+                  <p class="text-[12px] text-neutral-500 mt-3">Les frais de livraison, les taxes et les codes de réduction sont calculés au moment de la facturation.</p>
+                
+              </div>
+
+                <div class=" h-full w-full bg-black hover:bg-(--orange) duration-200  ">
+                  <button class="flex cursor-pointer w-full h-15 items-center justify-center gap-3">
+                    <img class="" src="/Assets/Resources/icones/shopping_bag_white.svg"  alt="" srcset="">
+                    <P class="text-white ">ACHETER</p>
+                  </button>
+
+                </div>
+
+              </div>
+    
+            </div>
+  </nav>
+
+    <!-- Sidebar Tab Menu -->
+    <div id="mobileMenu" class="fixed top-0 left-0 w-80 h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 md:hidden">
+    
+      <div class="flex items-center justify-between p-4 border-b">
+        <span class="text-lg font-medium">Menu</span>
+        <button onclick="toggleMenu()">✕</button>
+      </div>
+
+
+      <div class="flex justify-around text-sm font-medium uppercase mt-4 ">
+        <button onclick="switchTab('women')" id="tab-women" class="py-2 border-b-2 border-orange-500 text-orange-500">Women</button>
+        <button onclick="switchTab('man')" id="tab-man" class="py-2 text-gray-500">Man</button>
+        <button onclick="switchTab('kids')" id="tab-kids" class="py-2 text-gray-500">Kids</button>
+      </div>
+
+    
+      <div class="p-4">
+        
+        <div id="content-women" class="tab-content space-y-2">
+          <div class="menu-item">New</div>
+          <div class="menu-item">Apparel</div>
+          <div class="menu-item">Bag</div>
+          <div class="menu-item">Shoes</div>
+          <div class="menu-item">Beauty</div>
+          <div class="menu-item">Accessories</div>
+        </div>
+
+
+        <div id="content-man" class="tab-content hidden space-y-2">
+          <div class="menu-item">New</div>
+          <div class="menu-item">T-Shirts</div>
+          <div class="menu-item">Sneakers</div>
+          <div class="menu-item">Jeans</div>
+          <div class="menu-item">Watches</div>
+        </div>
+
+      
+        <div id="content-kids" class="tab-content hidden space-y-2">
+          <div class="menu-item">New Arrivals</div>
+          <div class="menu-item">Toys</div>
+          <div class="menu-item">Clothes</div>
+          <div class="menu-item">Shoes</div>
+        </div>
+
+        <div class="mt-6 space-y-2 text-gray-700 text-sm">
+          <div class="flex items-center gap-2">
+             <img class="w-10 h-5"  src="/Assets/Resources/icones/Call.svg" alt="">
+             <span>(+221) 78 581 57 82</span>
+          </div>
+          <div class="flex items-center gap-2">
+             <img class="w-10 h-5" src="/Assets/Resources/icones/Location.svg" alt="" srcset="">
+             <span>Cite Senghor</span>
+            </div>
+        </div>
+
+         <img class="mx-auto opacity-50 my-5"  src="/Assets/Resources/icones/Devider.svg" alt="" srcset="">
+
+        <div class="flex justify-center mt-6 space-x-6 text-xl text-gray-600">
+          <a href="#">
+            <img src="/Assets/Resources/icones/Twitter.svg" alt="" srcset="">
+          </a>
+          <a href="#">
+              <img src="/Assets/Resources/icones/instagram_plein.svg" alt="" srcset="">
+          </a>
+          <a href="#">
+            <img src="/Assets/Resources/icones/YouTube.svg" alt="" srcset="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  <main class="mt-[8vh] ">
+
+
+
+        <header class="h-[92vh]  relative overflow-hidden">
+            <div id="slider" class="h-full w-full relative">
+                <!-- Slide 1 -->
+                <div class="slide absolute max-md:flex max-md:items-center max-md:justify-center inset-0 transition-opacity duration-700 opacity-100 bg-cover bg-no-repeat md:pl-[5%] md:pt-[15%] bg-[url(/Assets/Resources/images/hero_bg_1_2.png)] sm:bg-[url(/Assets/Resources/images/hero_bg.png)] " >
+                    <div class="max-sm:text-white">
+                        <div class="hero_title text-3xl text-center md:text-left md:text-4xl lg:text-6xl">
+                            <h1 >LUXURY FASHION</h1>
+                            <h1>&</h1>
+                            <h1 class="">ACCESSORIES</h1>
+                        </div>
+                        <button class=" border_none max-md:mx-auto  mt-40 md:mt-10 bg-black/40 px-10 py-3 rounded-4xl text-white hover:bg-black/30 cursor-pointer duration-200">EXPLORE COLLECTION</button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide absolute inset-0 max-md:flex max-md:items-center max-md:justify-center  transition-opacity duration-700 opacity-0 bg-cover bg-no-repeat pr-[5%] pt-[15%] bg-[url(/Assets/Resources/images/hero_bg_3_2.png)] sm:bg-[url(/Assets/Resources/images/hero_bg_3.png)] " >
+                    <div class="max-sm:text-white ">
+                        <div class="hero_title text-center md:text-right text-3xl md:text-4xl lg:text-6xl">
+                            <h1 >NEW ARRIVALS</h1>
+                            <h1 >&</h1>
+                            <h1 >SUMMER STYLE</h1>
+                        </div>
+                        <button class=" border_none max-md:block max-md:mx-auto mt-40 md:mt-10 bg-black/40 px-10 py-3 rounded-4xl text-white hover:bg-black/30 cursor-pointer md:float-right duration-200">SHOP NOW</button>
+                    </div>
+                </div>
+                <!-- slide 3 -->
+                <div class="slide absolute inset-0 max-md:flex max-md:items-center max-md:justify-center  transition-opacity duration-700 opacity-0 bg-cover bg-no-repeat md:pl-[5%] pt-[15%] bg-[url(/Assets/Resources/images/hero_bg_2_2.png)] sm:bg-[url(/Assets/Resources/images/hero_bg_2.png)]">
+                    <div class="max-sm:text-white">
+                        <div class="hero_title text-3xl text-center md:text-left  md:text-4xl lg:text-6xl">
+                            <h1 >NEW ARRIVALS</h1>
+                            <h1>&</h1>
+                            <h1 >SUMMER STYLE</h1>
+                        </div>
+                        <button class=" border_none max-md:block max-md:mx-auto mt-40 md:mt-10 bg-black/40 px-10 py-3 rounded-4xl text-white hover:bg-black/30 cursor-pointer duration-200">SHOP NOW</button>
+                    </div>
+                </div>
+              
+            </div>
+            <!-- Indicateurs -->
+            <div id="indicators_hero" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+                <span class="indicator_hero w-3 h-3 rounded-full bg-white/70 border border-white cursor-pointer"></span>
+                <span class="indicator_hero w-3 h-3 rounded-full bg-white/30 border border-white cursor-pointer"></span>
+                <span class="indicator_hero w-3 h-3 rounded-full bg-white/30 border border-white cursor-pointer"></span>
+            </div>
+        </header>
+
+        <!-- section 1 new arrival  -->
+
+        <section class="new_arrival px-[7%]  ">
+            <div class=" mt-10 md:mt-[5%]">
+                <!-- top -->
+                <div class="new_arrival_title text-center text-xl md:text-2xl">
+                   <div class="flex-col items-center justify-center ">
+                        <h1 class="tracking-widest ">NEW ARRIVAL</h1>
+                        <!-- <div class="flex items-center justify-center mt-2"><span></span><small><img class="w-3 h-3 opacity-30" src="/Assets/Resources/icones/box.svg" alt="" srcset=""></small><span></span> </div> -->
+                        <img class="mx-auto opacity-30 mt-2"  src="/Assets/Resources/icones/Devider.svg" alt="" srcset="">
+                       
+                   </div>
+                </div>
+                <!-- sec link -->
+                  <nav class="flex justify-center  gap-7 md:gap-10 lg:gap-20 mb-6 mt-10">
+                    <button class="filter-btn text-gay-link  border-b-2 border-(--orange)" data-filter="all">All</button>
+                    <button class="filter-btn text-gay-link" data-filter="apparel">Apparel</button>
+                    <button class="filter-btn text-gay-link" data-filter="dress">Dress</button>
+                    <button class="filter-btn text-gay-link" data-filter="tshirt">Tshirt</button>
+                    <button class="filter-btn text-gay-link" data-filter="bag">Bag</button>
+                </nav>
+
+                <div id="products" class="grid grid-cols-2 md:grid-cols-4  gap-4">
+                    <div class="product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                        <img  src="/Assets/Resources/images/woman/new_arrival_all_1.png" alt="" class="w-full  h-50 md:h-80 object-cover rounded">
+                        <div class="text-center mt-4">21WN reversible angora cardigan</div>
+                        <div class=" text-center text-(--orange) py-3">$120</div>
+                    </div>
+                    <div class="product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="apparel">
+                        <img  src="/Assets/Resources/images/woman/new_arrival_all_2.png" alt="" class="w-full  h-50 md:h-80 object-cover rounded">
+                        <div class="text-center mt-4">21WN reversible angora cardigan</div>
+                        <div class=" text-center text-(--orange) py-3">$120</div>
+                    </div>
+                    <div class="product hover:shadow-sm duration-500 cursor-pointer hover:bg-neutral-100" data-category="dress">
+                        <img  src="/Assets/Resources/images/woman/new_arrival_all_3.png" alt="" class="w-full  h-50 md:h-80 object-cover rounded">
+                        <div class="text-center mt-4">21WN reversible angora cardigan</div>
+                        <div class="text-center text-(--orange) py-3">$120</div>
+                    </div>
+                    <div class="product hover:shadow-sm duration-500 cursor-pointer  hover:bg-neutral-100" data-category="bag">
+                        <img  src="/Assets/Resources/images/woman/new_arrival_all_4.png" alt="" class="w-full  h-50 md:h-80 object-cover rounded">
+                        <div class="text-center mt-4">Oblong bag</div>
+                        <div class=" text-center text-(--orange) py-3">$120</div>
+                    </div>
+
+            </div>
+
+            <div class=" flex items-center justify-center gap-5 mt-10 md:mt-[5%]">
+                <a href="/Pages/category_view_grid.html" class="text-lg md:text-xl cursor-pointer hover:text-(--orange) duration-200 ">Explore More</a>
+                <img src="/Assets/Resources/icones/Arrow_right.svg" alt="" srcset="">
+            </div>
+        </section>
+
+        <div class="marques py-15 md:py-20 px-[7%] ">
+            <img src="/Assets/Resources/icones/Devider.svg" alt="" class="mx-auto opacity-40">
+          
+            <div class="marque my-10 md:my-15  grid grid-cols-3  lg:grid-cols-6 gap-5">
+                 <img src="/Assets/Resources/icones/Prada.svg" alt="">
+                 <img src="/Assets/Resources/icones/Burberry.svg" alt="">
+                 <img src="/Assets/Resources/icones/Boss.svg" alt="">
+                 <img src="/Assets/Resources/icones/Catier.svg" alt="">
+                 <img src="/Assets/Resources/icones/Gucci.svg" alt="">
+                 <img src="/Assets/Resources/icones/Tiffany & Co.svg" alt="">
+            </div>
+            
+             <img src="/Assets/Resources/icones/Devider.svg" alt="" class="mx-auto opacity-40">
+
+        </div>
+
+        <!-- collection -->
+
+        <section class=" w-full mb-20">
+
+            <h1 class="text-center text-xl md:text-2xl">COLLECTION</h1>
+
+            <div class="h-[40vh] sm:h-[60vh] w-full bg-[url(/Assets/Resources/images/collections.png)] max-sm:bg-cover max-sm:bg-no-repeat sm:bg-[url(/Assets/Resources/images/collection.png)] my-10 flex items-center  justify-end " >
+                 <div class=" mr-[10%] flex items-center">
+                    <h1 class="text-[80px]  sm:text-[300px] text-neutral-600 font-bold  sm:text-neutral-400/70">10</h1>
+                    <div class="flex-col items-center justify-center">
+                        <h1 class="font-bold text-3xl  md:text-7xl font-(--font-bodoni)  text-white">October</h1>
+                        <h1 class="font-thin  text-neutral-100 text-3xl  md:text-7xl">COLLECTION</h1>
+                    </div>
+                 </div>
+            </div>
+
+            <div class=" w-full px-5 sm:px-[7%] py-15 sm:py-[15%] grid grid-cols-2 gap-5 md:gap-10">
+
+                <div class="h-[30vh] sm:h-[60vh] bg-cover bg-center  bg-[url(/Assets/Resources/images/autumn1.png)]   flex items-center  ">            
+                 <div class=" ml-[10%] flex items-center">
+                    <div class="flex-col items-center justify-center">
+                        <h1 class="font-bold text-2xl  md:text-7xl font-(--font-bodoni)  text-white">Autumn</h1>
+                        <h1 class="font-thin  text-neutral-100 text-lg  md:text-4xl">COLLECTION</h1>
+                    </div>
+                 </div>
+                </div>
+    
+                <div class="h-[30vh] sm:h-[60vh]  overflow-hidden my-10  ">
+                     <img class=" w-full h-full object-cover hover:scale-125 duration-300 cursor-pointer" src="/Assets/Resources/images/autumn2.png" alt="" srcset="">
+                </div>
+
+            </div>
+
+            <div class="h-[40vh] sm:h-[70vh] w-full ">
+                  <iframe  class="w-full h-full"
+                    src="https://www.youtube.com/embed/XOlkoj9tmQk"  
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media; fullscreen" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+
+
+        </section>
+
+        <!-- just for YOU -->
+
+        <section class="py-10 px-5 sm:px-[7%]">
+             <div class="new_arrival_title text-center text-xl md:text-2xl">
+                   <div class="flex-col items-center justify-center ">
+                        <h1 class="tracking-widest ">JUST FOR YOU</h1>
+                        <img class="mx-auto opacity-30 mt-2"  src="/Assets/Resources/icones/Devider.svg" alt="" srcset="">
+                       
+                   </div>
+             </div>
+
+
+
+             <!-- slide de just for you  -->
+
+
+             <div class="box_just_for_you max-w-7xl mx-auto py-10 ">
+                    <!-- Carrousel -->
+                    <div id="carousel_home" class="just_for_you flex overflow-x-auto scroll-smooth space-x-4 px-2 md:px-0  hide-scrollbar">
+                      
+                    </div>
+                    <!-- Indicateurs -->
+                    <div id="indicators_home" class="flex justify-center mt-4 space-x-2"></div>
+            </div>
+
+            <!-- trending -->
+
+          <div class="py-10 w-full">
+
+              <h1 class="my-10 text-center  text-xl md:text-2xl">@TRENDING</h1>
+            <div class="trending flex flex-wrap sm:flex-nowrap justify-center gap-3 sm:gap-5 overflow-x-auto hide-scrollbar px-2">
+                <span class="whitespace-nowrap  text-sm md:text-md p-3 bg-neutral-100 rounded-xl text-neutral-500 hover:text-black duration-200 cursor-pointer hover:shadow-sm">#2021</span>
+                <span class="whitespace-nowrap  text-sm md:text-md p-3 bg-neutral-100 rounded-xl text-neutral-500 hover:text-black duration-200 cursor-pointer hover:shadow-sm">#spring</span>
+                <span class="whitespace-nowrap  text-sm md:text-md p-3 bg-neutral-100 rounded-xl text-neutral-500 hover:text-black duration-200 cursor-pointer hover:shadow-sm">#collection</span>
+                <span class="whitespace-nowrap text-sm md:text-md  p-3 bg-neutral-100 rounded-xl text-neutral-500 hover:text-black duration-200 cursor-pointer hover:shadow-sm">#fall</span>
+                <span class="whitespace-nowrap text-sm md:text-md  p-3 bg-neutral-100 rounded-xl text-neutral-500 hover:text-black duration-200 cursor-pointer hover:shadow-sm">#dress</span>
+                <span class="whitespace-nowrap text-sm md:text-md  p-3 bg-neutral-100 rounded-xl text-neutral-500 hover:text-black duration-200 cursor-pointer hover:shadow-sm">#autumncollection</span>
+                <span class="whitespace-nowrap text-sm md:text-md  p-3 bg-neutral-100 rounded-xl text-neutral-500 hover:text-black duration-200 cursor-pointer hover:shadow-sm">#openfashion</span>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- section open fashion  -->
+
+        <section class="py-10 px-5 sm:px-[7%] bg-(--header)">
+
+            <img class="w-30 mx-auto" src="/Assets/Resources/icones/Logo.svg" alt="">
+
+               <div class="flex-col items-center text-center justify-center py-10">
+                 <p>Making a luxurious lifestyle accessible for a generous group of women is our daily drive.</p>
+                <img class="mx-auto opacity-30 mt-2"  src="/Assets/Resources/icones/Devider.svg" alt="" srcset="">       
+              </div>
+
+              <div class="grid  grid-cols-2 md:grid-cols-4 gap-5">
+
+                 <div class="flex flex-col text-center justify-center items-center bg-white hover:scale-105 rounded-sm  hover:bg-neutral-50 hover:shadow-sm duration-200 cursor-pointer p-10 ">
+                    <img class="w-10 md:w-15  mb-5" src="/Assets/Resources/icones/MiroodlesSticker1.svg" alt="">
+                    <p>Fast shipping. Free on orders over $25.</p>
+                 </div>
+                 <div class="flex flex-col text-center justify-center items-center bg-white hover:scale-105 rounded-sm  hover:bg-neutral-50 hover:shadow-sm duration-200 cursor-pointer p-10 ">
+                    <img class="w-10 md:w-15  mb-5" src="/Assets/Resources/icones/MiroodlesSticker2.svg" alt="">
+                    <p>Sustainable process from start to finish.</p>
+                 </div>
+                 <div class="flex flex-col text-center justify-center items-center bg-white hover:scale-105 rounded-sm  hover:bg-neutral-50 hover:shadow-sm duration-200 cursor-pointer p-10 ">
+                    <img class="w-10 md:w-15  mb-5" src="/Assets/Resources/icones/MiroodlesSticker3.svg" alt="">
+                    <p>Unique designs and high-quality materials.</p>
+                 </div>
+                 <div class="flex flex-col text-center justify-center items-center bg-white hover:scale-105 rounded-sm  hover:bg-neutral-50 hover:shadow-sm duration-200 cursor-pointer p-10 ">
+                    <img class="w-10 md:w-15  mb-5" src="/Assets/Resources/icones/MiroodlesSticker4.svg" alt="">
+                    <p>Fast shipping.Free on orders over $25.</p>
+                 </div>
+
+              </div>
+
+              <img  class="my-15 w-20 md:w-30 mx-auto" src="/Assets/Resources/icones/sapin.svg" alt="" srcset="">
+           
+
+        </section>
+
+        <!--  -->
+
+        <section class="py-10 px-5 sm:px-[7%]">
+        
+
+               <div class="flex-col items-center text-center justify-center py-10">
+                 <h1 class="text-xl md:text-2xl">FOLLOW USE</h1>
+                <img class="mx-auto opacity-30 mt-2 w-8"  src="/Assets/Resources/icones/instagram.svg" alt="" srcset="">       
+              </div>
+
+              <div class="grid h-[50vh]  grid-cols-2 lg:grid-cols-4 gap-5">
+
+                 <div class="h-full w-full bg-no-repeat bg-cover bg-[url(/Assets/Resources/images/follow_us_1.png)] hover:scale-105 rounded-sm  hover:bg-neutral-50 hover:shadow-sm duration-200 cursor-pointer flex items-end pb-5 ">
+                    <h1 class="text-xl text-neutral-400 ml-2">@mia</h1>
+                 </div>
+                 <div class="h-full w-full bg-no-repeat bg-cover bg-[url(/Assets/Resources/images/follow_us_2.png)] hover:scale-105 rounded-sm  hover:bg-neutral-50 hover:shadow-sm duration-200 cursor-pointer flex items-end pb-5 ">
+                     <h1 class="text-xl text-neutral-400 ml-2">@__Jihyn</h1>
+                 </div>
+                 <div class="h-full w-full bg-no-repeat bg-cover bg-[url(/Assets/Resources/images/follow_us_3.png)] hover:scale-105 rounded-sm  hover:bg-neutral-50 hover:shadow-sm duration-200 cursor-pointer flex items-end pb-5 ">
+                     <h1 class="text-xl text-neutral-400 ml-2">@mia</h1>
+                 </div>
+                 <div class="h-full w-full bg-no-repeat bg-cover bg-[url(/Assets/Resources/images/follow_us_4.png)] hover:scale-105 rounded-sm  hover:bg-neutral-50 hover:shadow-sm duration-200 cursor-pointer flex items-end pb-5 ">
+                     <h1 class="text-xl text-neutral-400 ml-2">@__kira</h1>
+                 </div>
+                
+              </div>
+
+
+
+        </section>
+
+        
+
+    </main>
+
+
+    <!-- footer -->
+
+    <footer class=" mt-[10%]">
+
+       <div class="   px-10 px-[7%] flex gap-10 flex-col md:flex md:flex-row  items-center justify-between py-[10vh]">
+           <div class="flex justify-center items_center gap-10">
+            <img src="/Assets/Resources/icones/Twitter.svg" alt="" srcset="">
+            <img src="/Assets/Resources/icones/instagram_plein.svg" alt="" srcset="">
+            <img src="/Assets/Resources/icones/youtube.svg" alt="" srcset="">
+            
+        </div>
+        <div class="text-center">
+            <p>support@openui.design +60 825 87608:00 - 22:00 - Everyday</p>
+        </div>
+        <div class=" flex item-center justify-center gap-5">
+            <a href=""  class="hover:text-(--orange)  duration-200 ">About</a>
+            <a href="" class="hover:text-(--orange) duration-200 ">Contact</a>
+            <a href="" class="hover:text-(--orange) duration-200 ">Blog</a>
+        </div>
+       </div>
+
+       <div class="p-5 bg-neutral-200">
+         <p class="max-sm:text-md text-center">Copyright© OpenUI All Rights Reserved.</p>
+       </div>
+
+        
+    </footer>
+
+
+
+    <script src="/Assets/Scripts/main.js" type="module"></script>
+    <script src="/Assets/Scripts/back_office.js" type="module"></script>
+
+  <script>
+
+  </script>
+
+ 
+    
+</body>
+</html>

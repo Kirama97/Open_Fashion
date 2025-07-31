@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Mobile Menu Button -->
+  <div class="p-4 md:hidden flex justify-between items-center bg-white shadow">
+    <h1 class="text-lg font-bold">MENU</h1>
+    <button id="openMenu" class="text-2xl font-bold">&equiv;</button>
+  </div>
+
+  <!-- Side Menu (Mobile) -->
+  <div id="menu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto">
+    <div class="p-4 flex justify-between items-center border-b">
+      <span class="font-bold text-lg">Menu</span>
+      <button id="closeMenu" class="text-xl">&times;</button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex justify-around text-sm font-medium border-b mt-2">
+      <button class="tab active-tab" data-tab="women">WOMEN</button>
+      <button class="tab" data-tab="man">MAN</button>
+      <button class="tab" data-tab="kids">KIDS</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="tabContent" class="p-4 space-y-3">
+      <div class="menu-item">
+        <button class="flex justify-between w-full" onclick="toggleSub(this)">
+          <span>Apparel</span>
+          <span>&#9662;</span>
+        </button>
+        <ul class="hidden ml-4 mt-2 space-y-1 text-sm text-gray-600">
+          <li>Outer</li>
+          <li>Dress</li>
+          <li>Blouse/Shirt</li>
+          <li>T-Shirt</li>
+          <li>Knitwear</li>
+          <li>Skirt</li>
+          <li>Pants</li>
+          <li>Denim</li>
+          <li>Kids</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="flex justify-between w-full" onclick="toggleSub(this)">
+          <span>Bag</span>
+          <span>&#9662;</span>
+        </button>
+        <ul class="hidden ml-4 mt-2 text-sm text-gray-600">
+          <li>Handbag</li>
+          <li>Backpack</li>
+        </ul>
+      </div>
+      <!-- Repeat for Shoes, Beauty, Accessories -->
+      <div class="text-sm mt-6 space-y-2">
+        <div class="flex items-center gap-2">
+          📞 <span>(786) 713-8616</span>
+        </div>
+        <div class="flex items-center gap-2">
+          📍 <span>Store locator</span>
+        </div>
+      </div>
+      <div class="flex justify-center gap-4 mt-4 text-xl">
+        <span>🐦</span><span>📸</span><span>▶️</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex justify-between items-start bg-white shadow-md p-4">
+    <div class="flex gap-8 text-sm font-semibold">
+      <button class="tab active-tab" data-tab="women">WOMEN</button>
+      <button class="tab" data-tab="man">MAN</button>
+      <button class="tab" data-tab="kids">KIDS</button>
+    </div>
+    <div class="flex flex-col items-end gap-2 text-sm">
+      <div class="flex items-center gap-2">📞 (786) 713-8616</div>
+      <div class="flex items-center gap-2">📍 Store locator</div>
+      <div class="flex gap-3 text-lg">
+        🐦 📸 ▶️
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById("openMenu").onclick = () => {
+      document.getElementById("menu").classList.remove("translate-x-full");
+    };
+    document.getElementById("closeMenu").onclick = () => {
+      document.getElementById("menu").classList.add("translate-x-full");
+    };
+
+    // Tabs switch
+    document.querySelectorAll(".tab").forEach(tab => {
+      tab.onclick = () => {
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active-tab"));
+        tab.classList.add("active-tab");
+        // TODO: tabContent change depending on tab.dataset.tab
+      };
+    });
+
+    // Toggle submenu
+    function toggleSub(btn) {
+      const ul = btn.nextElementSibling;
+      ul.classList.toggle("hidden");
+    }
+  </script>
+
+  <style>
+    .active-tab {
+      border-bottom: 2px solid orange;
+      color: orange;
+    }
+  </style>
+
+</body>
+</html>
