@@ -7,7 +7,7 @@ export const my_header = () => {
     
     return `
 
-        <button onclick="toggleMenu()" class="md:hidden">
+        <button  class="md:hidden  toggleMenu ">
           <img class="w-5" src="/Assets/Resources/icones/Menu.svg" alt="Menu">
         </button>
         <a href="/index.html" class="flex items-center text-orange-500 font-bold text-xl">
@@ -107,6 +107,80 @@ export const my_header = () => {
             </div>
     `
     };
+
+export const rideau = () => {
+  return ` 
+
+     <div class="flex items-center justify-between p-4 border-b">
+        <span class="text-lg font-medium">Menu</span>
+        <button class="closeMenu">✕</button>
+      </div>
+
+
+      <div class="flex justify-around text-sm font-medium uppercase mt-4 ">
+        <button data-tab="Homme" id="tab-Homme" class="tab-btn py-2 border-b-2 border-orange-500 text-orange-500">Homme</button>
+        <button data-tab="Femme" id="tab-Femme" class="tab-btn py-2 text-gray-500">Femme</button>
+        <button data-tab="Enfant"  id="tab-Enfant" class="tab-btn py-2 text-gray-500">Enfant</button>
+      </div>
+
+    
+      <div class="p-4">
+        
+        <div id="content-Homme" class="tab-content space-y-2">
+          <div class="menu-item">New</div>
+          <div class="menu-item">Apparel</div>
+          <div class="menu-item">Bag</div>
+          <div class="menu-item">Shoes</div>
+          <div class="menu-item">Beauty</div>
+          <div class="menu-item">Accessories</div>
+        </div>
+
+
+        <div id="content-Femme" class="tab-content hidden space-y-2">
+          <div class="menu-item">New</div>
+          <div class="menu-item">T-Shirts</div>
+          <div class="menu-item">Sneakers</div>
+          <div class="menu-item">Jeans</div>
+          <div class="menu-item">Watches</div>
+        </div>
+
+      
+        <div id="content-Enfant" class="tab-content hidden space-y-2">
+          <div class="menu-item">New Arrivals</div>
+          <div class="menu-item">Toys</div>
+          <div class="menu-item">Clothes</div>
+          <div class="menu-item">Shoes</div>
+        </div>
+
+        <div class="mt-6 space-y-2 text-gray-700 text-sm">
+          <div class="flex items-center gap-2">
+             <img class="w-10 h-5"  src="/Assets/Resources/icones/Call.svg" alt="">
+             <span>(+221) 78 581 57 82</span>
+          </div>
+          <div class="flex items-center gap-2">
+             <img class="w-10 h-5" src="/Assets/Resources/icones/Location.svg" alt="" srcset="">
+             <span>Cite Senghor</span>
+            </div>
+        </div>
+
+         <img class="mx-auto opacity-50 my-5"  src="/Assets/Resources/icones/Devider.svg" alt="" srcset="">
+
+        <div class="flex justify-center mt-6 space-x-6 text-xl text-gray-600">
+          <a href="#">
+            <img src="/Assets/Resources/icones/Twitter.svg" alt="" srcset="">
+          </a>
+          <a href="#">
+              <img src="/Assets/Resources/icones/instagram_plein.svg" alt="" srcset="">
+          </a>
+          <a href="#">
+            <img src="/Assets/Resources/icones/YouTube.svg" alt="" srcset="">
+          </a>
+        </div>
+      </div>
+  
+  
+  `
+}
 
 
 

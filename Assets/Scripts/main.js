@@ -29,26 +29,73 @@ if (big_nav) {
   
 }
 
+// 
 
 
 
-// burguer du nav 
+// ---------------rideau et--burguer du nav  --------------------------
 
 
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("-translate-x-full");
-    }
+import { rideau } from '../Scripts/template.js';
 
-    function switchTab(tab) {
-      const tabs = ['women', 'man', 'kids'];
-      tabs.forEach(t => {
-        document.getElementById(`tab-${t}`).classList.remove('text-orange-500', 'border-orange-500', 'border-b-2');
-        document.getElementById(`content-${t}`).classList.add('hidden');
+    const buttonMenu = document.querySelectorAll(".toggleMenu");
+    const mobileMenu =  document.getElementById("mobileMenu")
+
+  if (buttonMenu.length > 0) {
+    buttonMenu.forEach((b) => {
+      b.addEventListener('click', () => {
+        if (mobileMenu) {
+          mobileMenu.innerHTML = rideau();
+          mobileMenu.classList.toggle("-translate-x-full");
+          
+
+          // Réattacher les events sur les nouveaux boutons tab dynamiques
+          const tabMenu = mobileMenu.querySelectorAll('.tab-btn');
+          tabMenu.forEach(btn => {
+            btn.addEventListener('click', function() {
+              const tab = this.getAttribute('data-tab');
+              switchTab(tab);
+            });
+          });
+
+           const closeBtn = mobileMenu.querySelector('.closeMenu');
+          if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+              mobileMenu.classList.add('-translate-x-full');
+            });
+          }
+
+        }
       });
-      document.getElementById(`tab-${tab}`).classList.add('text-orange-500', 'border-orange-500', 'border-b-2');
-      document.getElementById(`content-${tab}`).classList.remove('hidden');
-    }
+    });
+  }
 
+// Pour les tabs présents au chargement de la page (desktop ou autre)
+const tabMenu = document.querySelectorAll('.tab-btn');
+if (tabMenu.length > 0) {
+  tabMenu.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const tab = this.getAttribute('data-tab');
+      switchTab(tab);
+    });
+  });
+}
+
+
+        
+  function switchTab(tab) {
+    const tabs = ['Homme', 'Femme', 'Enfant'];
+    tabs.forEach(t => {
+      const tabBtn = document.getElementById(`tab-${t}`);
+      const tabContent = document.getElementById(`content-${t}`);
+      if (tabBtn) tabBtn.classList.remove('text-orange-500', 'border-orange-500', 'border-b-2');
+      if (tabContent) tabContent.classList.add('hidden');
+    });
+    const activeBtn = document.getElementById(`tab-${tab}`);
+    const activeContent = document.getElementById(`content-${tab}`);
+    if (activeBtn) activeBtn.classList.add('text-orange-500', 'border-orange-500', 'border-b-2');
+    if (activeContent) activeContent.classList.remove('hidden');
+  }
 // hero slider
 
 let current = 0;

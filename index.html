@@ -17,7 +17,7 @@
 
 
     <nav class="big_nav bg-white  top-0 left-0 shadow-xl flex h-[8vh] z-20 items-center px-[7%] justify-between relative">
-        <button onclick="toggleMenu()" class="md:hidden">
+        <button  class="md:hidden toggleMenu" >
           <img class="w-5" src="/Assets/Resources/icones/Menu.svg" alt="Menu">
         </button>
         <a href="/index.html" class="flex items-center text-orange-500 font-bold text-xl">
@@ -111,20 +111,20 @@
     
       <div class="flex items-center justify-between p-4 border-b">
         <span class="text-lg font-medium">Menu</span>
-        <button onclick="toggleMenu()">✕</button>
+        <button class="closeMenu">✕</button>
       </div>
 
 
       <div class="flex justify-around text-sm font-medium uppercase mt-4 ">
-        <button onclick="switchTab('women')" id="tab-women" class="py-2 border-b-2 border-orange-500 text-orange-500">Women</button>
-        <button onclick="switchTab('man')" id="tab-man" class="py-2 text-gray-500">Man</button>
-        <button onclick="switchTab('kids')" id="tab-kids" class="py-2 text-gray-500">Kids</button>
+        <button data-tab="Homme" id="tab-Homme" class="tab-btn py-2 border-b-2 border-orange-500 text-orange-500">Homme</button>
+        <button data-tab="Femme" id="tab-Femme" class="tab-btn py-2 text-gray-500">Femme</button>
+        <button data-tab="Enfant"  id="tab-Enfant" class="tab-btn py-2 text-gray-500">Enfant</button>
       </div>
 
     
       <div class="p-4">
         
-        <div id="content-women" class="tab-content space-y-2">
+        <div id="content-Homme" class="tab-content space-y-2">
           <div class="menu-item">New</div>
           <div class="menu-item">Apparel</div>
           <div class="menu-item">Bag</div>
@@ -134,7 +134,7 @@
         </div>
 
 
-        <div id="content-man" class="tab-content hidden space-y-2">
+        <div id="content-Femme" class="tab-content hidden space-y-2">
           <div class="menu-item">New</div>
           <div class="menu-item">T-Shirts</div>
           <div class="menu-item">Sneakers</div>
@@ -143,7 +143,7 @@
         </div>
 
       
-        <div id="content-kids" class="tab-content hidden space-y-2">
+        <div id="content-Enfant" class="tab-content hidden space-y-2">
           <div class="menu-item">New Arrivals</div>
           <div class="menu-item">Toys</div>
           <div class="menu-item">Clothes</div>
