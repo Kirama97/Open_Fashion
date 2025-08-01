@@ -126,18 +126,18 @@ export const rideau = () => {
     
       <div class="p-4">
         
-        <div id="content-Homme" class="tab-content space-y-2">
-          <div class="menu-item">New</div>
-          <div class="menu-item">Apparel</div>
-          <div class="menu-item">Bag</div>
-          <div class="menu-item">Shoes</div>
-          <div class="menu-item">Beauty</div>
-          <div class="menu-item">Accessories</div>
+        <div id="content-Homme" class="tab-content flex flex-col  bg-neutral-100 pl-5 py-3 space-y-4">
+          <a href="/Pages/category_list_view.html" class="menu-item">New</a>
+          <a class="menu-item">Apparel</a>
+          <a class="menu-item">Bag</a>
+          <a class="menu-item">Shoes</a>
+          <a class="menu-item">Beauty</a>
+          <a class="menu-item">Accessories</a>
         </div>
 
 
-        <div id="content-Femme" class="tab-content hidden space-y-2">
-          <div class="menu-item">New</div>
+        <div id="content-Femme" class="tab-content hidden flex flex-col  bg-neutral-100 pl-5 py-3 space-y-4 ">
+         <a href="/Pages/category_list_view.html" class="menu-item">New</a>
           <div class="menu-item">T-Shirts</div>
           <div class="menu-item">Sneakers</div>
           <div class="menu-item">Jeans</div>
@@ -145,14 +145,14 @@ export const rideau = () => {
         </div>
 
       
-        <div id="content-Enfant" class="tab-content hidden space-y-2">
-          <div class="menu-item">New Arrivals</div>
+        <div id="content-Enfant" class="tab-content hidden flex flex-col  bg-neutral-100 pl-5 py-3 space-y-4">
+         <a href="/Pages/category_list_view.html" class="menu-item">New</a>
           <div class="menu-item">Toys</div>
           <div class="menu-item">Clothes</div>
           <div class="menu-item">Shoes</div>
         </div>
 
-        <div class="mt-6 space-y-2 text-gray-700 text-sm">
+        <div class="mt-6 space-y-2 text-gray-700 text-sm mt-1">
           <div class="flex items-center gap-2">
              <img class="w-10 h-5"  src="/Assets/Resources/icones/Call.svg" alt="">
              <span>(+221) 78 581 57 82</span>
